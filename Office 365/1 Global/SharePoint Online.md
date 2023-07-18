@@ -1,6 +1,6 @@
 # SharePoint Online
 
-SharePoint online is used to connect os SharePoint online then run commands against objects in SharePoint
+SharePoint online is used to connect to SharePoint online then run commands against objects in SharePoint
 
 ## Install the module
 
