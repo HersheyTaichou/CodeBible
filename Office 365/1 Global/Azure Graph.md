@@ -18,4 +18,5 @@ Import-Module -Name Microsoft.Graph
 ```
 
 Here is a link to a graph with a list of Azure AD commandlets and the Graph counterparts.
+
 [Find Azure AD and MSOnline cmdlets in Microsoft Graph PowerShell](https://learn.microsoft.com/en-us/powershell/microsoftgraph/azuread-msoline-cmdlet-map)
