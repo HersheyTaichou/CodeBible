@@ -19,7 +19,7 @@ $Creds = Get-Credential
 Set-Secret -Name Client -Secret $Creds
 ```
 
-## connect with stored creds
+## Connect with stored creds
 
 This only works if they are not using modern authentication
 
