@@ -11,7 +11,8 @@ Install-Module -Name Microsoft.Graph
 Update-Module -Name Microsoft.Graph 
 ```
 
-## Import the module (should not usually be needed)
+## Import the module 
+Normally, you should not need to import it, it should import automatically when you run commands. 
 ```PowerShell
 Import-Module -Name Microsoft.Graph
 ```
