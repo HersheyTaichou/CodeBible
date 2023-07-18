@@ -1,4 +1,4 @@
-# Repair a Computer's Domain
+# Repair a Computer's Domain Connection
 
 First, save the domain admin credentials
 
