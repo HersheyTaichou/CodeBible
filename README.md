@@ -2,7 +2,7 @@
 
 ## About
 
-A repository of code used for reference when performing troubleshooting tasks. 
+A repository of code used for reference when performing troubleshooting tasks.
 
 ## How to use
 
