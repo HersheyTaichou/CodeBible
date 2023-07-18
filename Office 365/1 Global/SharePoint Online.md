@@ -1,6 +1,6 @@
 # SharePoint Online
 
-Azure Graph is used to connect to Microsoft Azure AD, or Entra ID, then run commands against objects in Azure AD (Users, Groups, etc)
+SharePoint online is used to connect os SharePoint online then run commands against objects in SharePoint
 
 ## Install the module
 

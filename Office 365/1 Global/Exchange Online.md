@@ -1,6 +1,6 @@
-# Azure Graph
+# Exchange Online
 
-Azure Graph is used to connect to Microsoft Azure AD, or Entra ID, then run commands against objects in Azure AD (Users, Groups, etc)
+Exchange online is used to connect to Exchange online and run commands against objects in Exchange (Users, Groups, etc)
 
 ## Install the module
 
