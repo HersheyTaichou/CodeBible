@@ -1,6 +1,6 @@
 # AD Replication
 
-## Replicate this server with all of it's replication partners
+## Replicate this server with all of its replication partners
 
 ```bat
 repadmin /syncall /AedP

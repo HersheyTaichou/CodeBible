@@ -8,7 +8,7 @@ $cred = Get-Credential
 
 ## Repair the domain trust
 
-These run a quick fix, but may fail if the computer has been off the domain for too long, or some other issue.
+These run a quick fix but may fail if the computer has been off the domain for too long, or some other issue.
 
 ```PowerShell
 Reset-ComputerMachinePassword -Credential $cred -Verbose
@@ -22,7 +22,7 @@ Test-ComputerSecureChannel -Repair -Verbose -Credential $cred
 ## Leave and re-join the domain
 
 These commands will require an active connection to a domain controller (On-site or VPN) and they recommend a reboot between, but it is not required.  
-These commands also invalidate local cached domain credentials, so a connection to a DC will be required for the user to sign back in.
+These commands also invalidate locally cached domain credentials, so a connection to a DC will be required for the user to sign back in.
 
 The easiest way to do that remotely is:
 

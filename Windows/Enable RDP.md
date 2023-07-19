@@ -1,7 +1,5 @@
 # Enable Remote Desktop through PowerShell
 
-## Editing a registry key
-
 Run the following command in an elevated PowerShell session. It may require a reboot to apply but can be run using remote monitoring tools.
 
 ```Powershell

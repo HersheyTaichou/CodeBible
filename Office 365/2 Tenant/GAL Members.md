@@ -1,6 +1,6 @@
 # GAL Membership List
 
-Use this to get a csv with all the emails in Exchange online, including if they are in the GAL or not.
+Use this to get a CSV with all the emails in Exchange Online, including if they are in the GAL or not.
 
 ```PowerShell
 $FullGAL = Get-Mailbox -ResultSize Unlimited | Select-Object DisplayName,UserPrincipalName,HiddenFromAddressListsEnabled,RecipientTypeDetails

@@ -15,13 +15,13 @@ The fix for this is to set a different attribute for the user, then tell the Syn
       - Can be anything descriptive
    - Description: If the msDS-CloudExtensionAttribute1 attribute is set to HideFromGAL, hide from the Exchange Online GAL  
      - Can be anything descriptive
-   - Connected System: domain.local  
+   - Connected System: domain.local
      - The company's local domain name
    - Connected System Object Type: user
    - Metaverse Object Type: Person
    - Link Type: Join
    - Precedence: 50  
-     - can be any number under 100, 50 is the default. 
+     - can be any number under 100, 50 is the default.
      - **Do not duplicate numbers!**
    - Tag:
      - Can be left blank
@@ -40,3 +40,7 @@ The fix for this is to set a different attribute for the user, then tell the Syn
    `Start-ADSyncSyncCycle -PolicyType Initial`
 
 Make sure to go back and set the `msDS-cloudExtensionAttribute1` attribute to "HideFromGAL" for any users that should be hidden from the GAL. Also, remember that HideFromGAL is case sensitive
+
+## References
+
+[msExchHideFromAddressLists attribute isn't syncing across to Azure](https://social.msdn.microsoft.com/Forums/azure/en-US/8ef659e8-da58-4c5e-acad-2799f4b864c2/msexchhidefromaddresslists-attribute-isnt-syncing-across-to-azure?forum=WindowsAzureAD)

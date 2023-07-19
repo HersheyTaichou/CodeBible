@@ -1,6 +1,6 @@
 # User Termination PowerShell Steps
 
-Change FLast to match the terminated user's username and the Disabled OU to when you want to move the account to
+Change FLast to match the terminated user's username and disabledOU to where you want to move the account to
 
 ```PowerShell
 $Username = Get-ADObject -Filter {SamAccountName -eq "FLast"}
@@ -21,7 +21,7 @@ Clear the user's manager field
 Set-ADUser -Identity $Username -Manager $Null
 ```
 
-Hide the user from any from Address lists
+Hide the user from any Address lists
 
 ```PowerShell
 Set-ADObject -Identity $Username -replace @{msExchHideFromAddressLists=$true;}
@@ -35,7 +35,7 @@ Set-ADObject -Identity $Username -replace @{msExchRecipientTypeDetails=343597383
 Set-ADObject -Identity $Username -replace @{msExchRemoteRecipientType=100;}
 ```
 
-Set the description to the disable date
+Set the description to the disabled date
 
 ```PowerShell
 Set-ADObject -Identity $Username -Description "Disabled $(get-date -Format 'yyyy/MM/dd')"
@@ -53,7 +53,7 @@ Disable the user's AD account
 Disable-ADAccount -Identity $Username
 ```
 
-Move to the user to the disabled OU specificed above
+Move the user to the disabled OU specified above
 
 ```PowerShell
 Move-ADObject -Identity $Username -TargetPath $disabledOU

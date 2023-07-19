@@ -1,15 +1,15 @@
 # Message Trace logs
 
-Use the following scripts to get all the message trace logs sent from a particular user to a particular user for a specificed length of time.
+Use the following scripts to get all the message trace logs sent from a particular user to a particular user for a specific length of time.
 
-Update to the sender and recipient emails. Use *@domain.com to get everything sent to or from a particular domain
+Update the sender and recipient emails. Use *@domain.com to get everything sent to or from a particular domain
 
 ```PowerShell
 $SenderAddress = "user@domain.com"
 $RecipientAddress = "user@domain.com"
 ```
 
-Update to the start and end dates of the search. Exchange online will go back to a maximum of 90 days by default
+Update the start and end dates of the search. Exchange Online will go back to a maximum of 90 days by default
 
 ```PowerShell
 $StartDate = (Get-Date -Hour 00 -Minute 00 -Second 00).AddDays(-90)
@@ -36,7 +36,7 @@ do {
 } until ($messagesThisPage.count -eq 0)
 ```
 
-Finally, we export the reults to a CSV, excluding internal results
+Finally, we export the results to a CSV, excluding internal results
 
 ```PowerShell
 $messageTrace | Where-Object {$_.MessageId -notlike "*prod.outlook.com>"} | export-csv "C:\temp\MessageTrace $(Get-date -Format 'yyyy-MM-dd').csv"

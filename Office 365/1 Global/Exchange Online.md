@@ -1,6 +1,6 @@
 # Exchange Online
 
-Exchange online is used to connect to Exchange online and run commands against objects in Exchange (Users, Groups, etc)
+The ExchangeOnlineManagement module is used to connect to Exchange Online and run commands against objects in Exchange (Users, Groups, etc)
 
 ## Install the module
 
@@ -22,7 +22,7 @@ Normally, you should not need to import it, it should import automatically when 
 Import-Module -Name ExchangeOnlineManagement
 ```
 
-## Connect to Exchange online
+## Connect to Exchange Online
 
 ### Connect using the client's global admin
 

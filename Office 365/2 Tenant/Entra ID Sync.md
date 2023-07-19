@@ -1,6 +1,6 @@
 # Entra ID Sync
 
-The application formally known as Azure AD Sync
+This application is formally known as Azure AD Sync
 
 ## Import the module
 

@@ -1,5 +1,7 @@
 # Upload a photo to a user with SPO
 
+You can use the following commands to update a user's photo in Entra ID and Exchange Online. This is good for changing several users' photos with a single script.
+
 ## Set the user's photo
 
 ```PowerShell

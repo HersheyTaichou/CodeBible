@@ -1,4 +1,4 @@
-# Restore soft-deleted mailbox data into another mailbox
+# Restore soft-deleted mailbox data to another mailbox
 
 Get the ExchangeGuid from the source and target mailboxes
 
