@@ -38,3 +38,5 @@ The fix for this is to set a different attribute for the user, then tell the Syn
 8. Click Save at the bottom
 9. Open an admin PowerShell prompt and run an initial sync  
    `Start-ADSyncSyncCycle -PolicyType Initial`
+
+Make sure to go back and set the `msDS-cloudExtensionAttribute1` attribute to "HideFromGAL" for any users that should be hidden from the GAL. Also, remember that HideFromGAL is case sensitive
