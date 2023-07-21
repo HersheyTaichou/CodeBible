@@ -1,9 +1,29 @@
 # Code Reference Repository
 
-## About
+## Introduction
 
-A repository of code used for reference when performing troubleshooting tasks.
+This is my collection of notes, commands, and basic scripts I will use when performing troubleshooting, data collection, or object management tasks
 
-## How to use
+## Getting Started
 
-This repository can be viewed on Github's website, or you can sync it locally with your preferred utility. When used for reference, it may be easiest to use the website or a program that previews markdown files, as that will make it much easier to read
+This repository can be viewed on GitHub's website, or you can sync it locally with your preferred utility. When used for reference, it may be easiest to use the website or a program that previews markdown files, as that will make it much easier to read.
+
+### Visual Studio Code
+
+[Visual Studio Code](https://code.visualstudio.com/) can be downloaded from Microsoft for free. The installation is fairly straightforward, and it includes git capabilities built-in.
+
+While VSCode is installed, you will want to log into GitHub and fork this repository so it is available in your account.
+
+Once you have VSCode installed, you want to go to the Source Control tab on the left and click on the option to Clone a repository.
+
+At the top, it will ask you where you want to clone the repository from, click Github. It will then have you sign into GitHub, and finally, give you a list of all the repositories in your account. Click your fork of this repository.
+
+Finally, it will ask you where you want to want to store the local copy of your repository
+
+## Contribute
+
+I am always open to suggestions of things that you have found helpful, or ways I can improve the documentation on the scripts and how-to's present in this repository.
+
+Please use the issues tab at the top of the repository on GitHub to suggest any improvements or problems found.
+
+And as always, Thank you!
