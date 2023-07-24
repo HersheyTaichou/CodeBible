@@ -7,4 +7,4 @@ $Results = Get-EventLog -LogName System
 $Results
 ```
 
-[Man Get-EventLog](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-eventlog?view=powershell-5.1)
+[Get-EventLog](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-eventlog?view=powershell-5.1)

@@ -1,5 +1,17 @@
 # Analyzing Windows Crash Dump Logs
 
+## Check Crash Dump Logging Settings
+
+1. Open an Admin CMD or PowerShell prompt
+2. Run the following command
+
+   ```bat
+   REG QUERY HKLM\SYSTEM\CurrentControlSet\Control\CrashControl
+   ```
+
+3. Review the output, the following link may be of help:  
+   [Overview of memory dump file options for Windows](https://learn.microsoft.com/en-us/troubleshoot/windows-server/performance/memory-dump-file-options)
+
 ## Tools
 
 Install [WinDbg Preview](https://www.microsoft.com/store/productId/9PGJGD53TN86) from the Microsoft Store
