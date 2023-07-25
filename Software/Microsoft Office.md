@@ -1,4 +1,6 @@
-# Microsoft Office Deployment Tool
+# Microsoft Office
+
+## Microsoft Office Deployment Tool
 
 Download the latest version of the deployment tool  
 <https://www.microsoft.com/en-us/download/details.aspx?id=49117>
@@ -22,3 +24,31 @@ This will initiate the installation of Office on the computer per your specifica
 ```PowerShell
 Setup.exe /configure Configurationfile.xml
 ```
+
+## Change the Office 365 Channel
+
+1. Launch a terminal as an administrator.
+2. Navigate to “C:\Program Files\Common Files\Microsoft Shared\ClickToRun\”
+3. Run the following commands
+
+   ```bat
+   .\OfficeC2RClient.exe /changesetting Channel=<Channel keyword>
+   .\OfficeC2RClient.exe /update user
+   ```
+
+## Check the version of Office Installed
+
+```PowerShell
+Get-WmiObject win32_product | where{$_.Name -like "*Office*"} | select Name,Version
+```
+
+| Channel | Keyword in CMD or ODT |
+| ------- | ------- |
+| Monthly Channel (Targeted) | Channel=”Insiders” or Channel=”FirstReleaseCurrent“ |
+| Monthly Channel | Channel=”Monthly” or Channel=”Current“ |
+| Semi-annual Channel (Targeted) | Channel=”Targeted” or Channel=”FirstReleaseDeferred“ |
+| Semi-annual Channel | Channel=”Broad” or Channel=”Deferred“ |
+
+## Documentation
+
+<https://erwinbierens.com/switch-office-2016-to-monthly-targeted-channel/>

@@ -49,3 +49,11 @@ Get-MobileDeviceStatistics -Mailbox $Username | Remove-MobileDevice
 $OoOMessage = "User is no longer with Company. Please contact manager@domain.com."
 Set-MailboxAutoReplyConfiguration -Identity $Username -AutoReplyState Enabled -InternalMessage $OoOMessage -ExternalMessage $OoOMessage
 ```
+
+## Cancel reoccuring Appointments
+
+The mailbox must still exist in the tenant for this to work
+
+```PowerShell
+Remove-CalendarEvents -Identity chris@contoso.com -CancelOrganizedMeetings
+```
