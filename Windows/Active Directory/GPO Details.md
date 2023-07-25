@@ -1,5 +1,13 @@
 # Get GPO Details
 
+## All GPOs for the Domain
+
+Run this from one of the DCs
+
+```PowerShell
+Get-GPOReport -All -Domain (Get-ADDomain).DNSRoot -Server (Get-ADDomain).PDCEmulator -ReportType HTML -Path "C:\Temp\GPOReportsAll.html"
+```
+
 ## Details for the User
 
 ### For the Logged-in user
@@ -15,7 +23,7 @@ gpresult  /H "C:\Temp\$env:UserName.html" /SCOPE USER
 Update "domain\username" to match the user you want the report for
 
 ```PowerShell
-gpresult  /H "C:\Temp\$env:UserName.html" /SCOPE USER /USER "domain\username"
+gpresult  /H "C:\Temp\gpresult.html" /SCOPE USER /USER "domain\username"
 ```
 
 ## Details for the Computer

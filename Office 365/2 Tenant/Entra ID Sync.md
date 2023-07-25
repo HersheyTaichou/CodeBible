@@ -23,3 +23,9 @@ Use PolicyType Initial to sync everything
 ```PowerShell
 Start-ADSyncSyncCycle -PolicyType Initial
 ```
+
+## Get Sync Status
+
+```PowerShell
+Get-ADSyncConnectorRunStatus
+```

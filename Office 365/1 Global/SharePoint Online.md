@@ -24,6 +24,8 @@ Import-Module -Name Microsoft.Online.SharePoint.PowerShell
 
 ## Connect to SPO
 
+Update the URL to the admin SharePoint site
+
 ```PowerShell
 Connect-SPOService -Url https://contoso-admin.sharepoint.com
 ```
