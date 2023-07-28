@@ -12,11 +12,11 @@ This repository can be viewed on GitHub's website, or you can sync it locally wi
 
 [Visual Studio Code](https://code.visualstudio.com/) can be downloaded from Microsoft for free. The installation is fairly straightforward, and it includes git capabilities built-in.
 
-While the VSCode installation is running, you will want to log into GitHub and fork this repository so it is available in your account.
+While the VSCode installation is running, you can log into GitHub and fork this repository, if you want your own copy.
 
 Once you have VSCode installed, you want to go to the Source Control tab on the left and click on the option to Clone a repository.
 
-At the top, it will ask you where you want to clone the repository from, click Github. It will then have you sign into GitHub, and finally, give you a list of all the repositories in your account. Click your fork of this repository.
+At the top, it will give you the option to paste a URL or log in to GitHub. You can paste the link from the Code dropdown at the top, or log in to your account and sync your copy of the repo
 
 Finally, it will ask you where you want to want to store the local copy of your repository
 
