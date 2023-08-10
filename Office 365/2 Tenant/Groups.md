@@ -9,7 +9,16 @@ $Members = Import-CSV Members.csv
 Add-DistributionGroupMember -Identity group@domain.com -Member $Member
 ```
 
-## Get all the DLs with their members
+## Get members for a type of group (One File)
+
+The following scripts will output one CSV file with the following format
+
+| Group name       | Members                            |
+|------------------|------------------------------------|
+| <group1@domain.com> | <user1@domain.com>; <user2@domain.com> |
+| <group2@domain.com> | <user1@domain.com>; <user3@domain.com> |
+
+### All Distribution groups
 
 ```PowerShell
 $GroupList = Get-DistributionGroup
@@ -31,7 +40,7 @@ ForEach ($Group in $GroupList) {
 $GroupsWMembers | Export-CSV "DL-Members.csv" -NoTypeInformation
 ```
 
-## Get All the Shared Mailboxes with Members
+### All Shared Mailboxes
 
 ```PowerShell
 $GroupList = Get-Mailbox -RecipientTypeDetails SharedMailbox -ResultSize:Unlimited
@@ -55,7 +64,7 @@ ForEach ($Group in $GroupList) {
 $GroupsWMembers | Export-CSV "Shared-Members.csv" -NoTypeInformation
 ```
 
-## Get All the Office 365 Groups with Members
+### All Microsoft 365 Groups
 
 ```PowerShell
 $GroupList = Get-UnifiedGroup
@@ -77,6 +86,46 @@ ForEach ($Group in $GroupList) {
     }
 }
 $GroupsWMembers | Export-CSV "O365-Members.csv" -NoTypeInformation
+```
+
+## Get members for a type of group
+
+The following scripts will output one CSV file for each group, each with the following format
+
+| Members                            |
+|------------------------------------|
+| <user1@domain.com> |
+| <user1@domain.com> |
+
+### Distribution groups
+
+```PowerShell
+$GroupList = Get-DistributionGroup
+
+Foreach($Group In $GroupList) {
+    $name = $Group.Name
+    Get-DistributionGroupMember "$group" | Export-csv C:\Temp\Client\$name.csv
+}
+```
+
+### Shared Mailboxes
+
+```PowerShell
+$GroupList = Get-Mailbox -RecipientTypeDetails SharedMailbox -ResultSize:Unlimited
+Foreach($Group In $GroupList) {
+    $name = $Group.Name
+    Get-MailboxPermission -Identity "$group" | ?{($_.IsInherited -eq $False) -and -not ($_.User -match “NT AUTHORITY”)} | Export-csv C:\Temp\Client\$name.csv
+}
+```
+
+### Microsoft 365 Groups
+
+```PowerShell
+$GroupList = Get-UnifiedGroup
+Foreach($Group In $GroupList) {
+    $name = $Group.Name
+    Get-UnifiedGroupLinks -LinkType Member -Identity  | Export-csv C:\Temp\Client\$name.csv
+}
 ```
 
 ## Exchange Distribution Group Membership Logs
