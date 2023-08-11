@@ -20,6 +20,17 @@ At the top, it will give you the option to paste a URL or log in to GitHub. You 
 
 Finally, it will ask you where you want to want to store the local copy of your repository.
 
+## Other Resources
+
+### Sean McAvinue's Blog and GitHub
+
+Sean's blog has various articles on PowerShell scripts that work with Microsoft's online services. The GitHub has his referenced PowerShell scripts.
+
+[Sean McAvinue - Modern Workplace Blog](https://seanmcavinue.net/)
+
+GitHub page:  
+[smcavinue/AdminSeanMc](https://github.com/smcavinue/AdminSeanMc)
+
 ## Contribute
 
 I am always open to suggestions of things that you have found helpful, or ways I can improve the documentation on the scripts and how-to's present in this repository.
