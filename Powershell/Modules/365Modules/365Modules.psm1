@@ -25,7 +25,7 @@
    # Add modules to install
    Update-365Modules -AddModules "Az","AzureAD"
 #>
-$BaseModules = @("Microsoft.Graph","Microsoft.Online.SharePoint.PowerShell","ExchangeOnlineManagement")
+$BaseModules = @("Microsoft.Graph","Microsoft.Online.SharePoint.PowerShell","ExchangeOnlineManagement","PartnerCenter")
 
 function Get-365Modules {
     [cmdletbinding()]
