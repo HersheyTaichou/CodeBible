@@ -48,16 +48,15 @@ function Connect-Service {
             [String]$Module,
         [Parameter(Mandatory=$true)] [ValidateSet([Customers])] [array]$Client
     )
-        if ($Module -eq "ExchangeOnline") {
-        Write-Host "Please log in to Exchange Online"
-        $Domain = ($Script:Customers | Where-Object {$_.Name -eq "$Client"}).Domain
-        Write-Host $CustomerId
-        Connect-ExchangeOnline -DelegatedOrganization $Domain
+    if ($Module -eq "ExchangeOnline") {
+        $Customer = $Script:Customers | Where-Object {$_.Name -eq "$Client"}
+        $message = "Run the following command to connect to Exchange Online as " + $Customer.Name + "`nConnect-ExchangeOnline -DelegatedOrganization " + $Customer.CustomerId
     }elseif ($Module -eq "MgGraph") {
         #Connect-MgGraph -TenantId $CustomerId
-        $CustomerId = ($Script:Customers | Where-Object {$_.Name -eq "$Client"}).CustomerId
-        Write-Host $CustomerId
+        $Customer = $Script:Customers | Where-Object {$_.Name -eq "$Client"}
+        $message = "Run the following command to connect to Microsoft Graph as " + $Customer.Name + "`nConnect-MgGraph -ClientId " + $Customer.CustomerId
     }
+    Write-Host $message
 }
 
 Export-ModuleMember -Function Connect-Service, Get-AvailableCustomers

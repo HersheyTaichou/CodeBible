@@ -2,10 +2,7 @@
 
 ## Connect to Exchange and Azure
 
-```PowerShell
-Connect-ExchangeOnline
-Connect-MgGraph  -Scopes "User.ReadWrite.All", "Group.ReadWrite.All"
-```
+At the very least, you will need to connect to Exchange Online. To sign the user out of all devices, you will need to log in to Microsoft Graph
 
 ## Get the user and save their object as a variable
 
@@ -25,10 +22,12 @@ Set-CASMailbox -Identity $Username -ActiveSyncEnabled $false -OWAforDevicesEnabl
 Add-MailboxPermission -Identity $Username -User "CWhelan" -AccessRights FullAccess
 ```
 
-## Sign out all applications
+## Sign out all applications and devices
+
+This command requires the "User.ReadWrite.All" scope when connecting to Microsoft Graph
 
 ```PowerShell
-Invoke-MgInvalidateUserRefreshToken -UserId $Username
+Revoke-MgUserSignInSession -UserId $Username
 ```
 
 ## Convert mailbox to shared
@@ -50,7 +49,7 @@ $OoOMessage = "User is no longer with Company. Please contact manager@domain.com
 Set-MailboxAutoReplyConfiguration -Identity $Username -AutoReplyState Enabled -InternalMessage $OoOMessage -ExternalMessage $OoOMessage
 ```
 
-## Cancel reoccuring Appointments
+## Cancel reoccurring Appointments
 
 The mailbox must still exist in the tenant for this to work
 
