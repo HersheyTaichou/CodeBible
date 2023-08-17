@@ -49,7 +49,7 @@ git init
 
 ### Stage Changes for Commit
 
-When working with files, when you are ready to take save the changes you have made so far, you want to stage those changes, to show that you are going to commit them to the git repository. You can either stage just some of the changes so far, by specifying the files you want to commit or stage all the files.
+When working with files, when you are ready to take save the changes you have made so far, you want to stage those changes, which tells Git what changed files you want to commit to the repository. You can either stage just some of the changes so far, by specifying the files you want to commit or stage all the files.
 
 To stage just one file, add it to the staging area:
 
@@ -57,7 +57,7 @@ To stage just one file, add it to the staging area:
 git add filename
 ```
 
-To stage all changes, place a period after add:
+To add all changed files to the staging area, place a period after add:
 
 ```PowerShell
 git add .
