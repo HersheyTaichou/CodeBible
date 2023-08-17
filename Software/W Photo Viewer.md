@@ -1,4 +1,8 @@
-# How to Bring Back Windows Photo Viewer in Windows 10
+# Windows Photo Viewer
+
+How to restore the Windows Photo Viewer in Windows 10
+
+## How to Install
 
 Save the following as a registry file and run it
 
@@ -43,9 +47,8 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CLASSES_ROOT\Applications\photoviewer.dll\shell\print\DropTarget]
 "Clsid"="{60fd46de-f830-4894-a628-6fa81bc0190d}"
-
 ```
 
-## Source
+### Source
 
 [How to Make Windows Photo Viewer Your Default Image Viewer on Windows 10](https://www.howtogeek.com/225844/how-to-make-windows-photo-viewer-your-default-image-viewer-on-windows-10/)

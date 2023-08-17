@@ -1,9 +1,14 @@
 # Microsoft Office
 
-## Microsoft Office Deployment Tool
+## How to Install
 
-Download the latest version of the deployment tool  
-<https://www.microsoft.com/en-us/download/details.aspx?id=49117>
+For just one machine with one user, you can log in to [Portal.Office.com](https://portal.office.com) and click the "Install Apps" button in the top right corner.
+
+### Microsoft Office Deployment Tool
+
+When installing on multiple machines or on a shared computer (Such as a remote desktop host), you want to use the Office Deployment Tool
+
+Download the latest version of the [deployment tool](https://www.microsoft.com/en-us/download/details.aspx?id=49117)
 
 Go to the [Office Config Website](https://config.office.com) to set up a custom XML file for use when installing Office.  It includes a variety of options, including which software to install, and if it will be used in a shared environment.
 
@@ -25,7 +30,13 @@ This will initiate the installation of Office on the computer per your specifica
 Setup.exe /configure Configurationfile.xml
 ```
 
-## Change the Office 365 Channel
+## How to Configure
+
+Once it is installed, make sure to open Outlook and sign in to register the software, and link it to your mailbox
+
+## How to Use
+
+### Change the Office 365 Channel
 
 1. Launch a terminal as an administrator.
 2. Navigate to “C:\Program Files\Common Files\Microsoft Shared\ClickToRun\”
@@ -36,7 +47,7 @@ Setup.exe /configure Configurationfile.xml
    .\OfficeC2RClient.exe /update user
    ```
 
-## Check the version of Office Installed
+### Check the version of Office Installed
 
 ```PowerShell
 Get-WmiObject win32_product | where{$_.Name -like "*Office*"} | select Name,Version
@@ -49,6 +60,6 @@ Get-WmiObject win32_product | where{$_.Name -like "*Office*"} | select Name,Vers
 | Semi-annual Channel (Targeted) | Channel=”Targeted” or Channel=”FirstReleaseDeferred“ |
 | Semi-annual Channel | Channel=”Broad” or Channel=”Deferred“ |
 
-## Documentation
+#### Source
 
 <https://erwinbierens.com/switch-office-2016-to-monthly-targeted-channel/>

@@ -21,7 +21,7 @@ git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com
 ```
 
-To set your identity for just one specific repo, browse to the local repo folder in PowerShell and use the --local switch
+To set your identity for just one specific repo, browse to the local repo folder in PowerShell and use the --local switch. This can be useful, for instance, if you have some repositories for work and some for personal use. You can set the work repositories to use a work email address, and the personal repositories to use a personal address.
 
 ```PowerShell
 cd c:\git\repo
@@ -65,7 +65,7 @@ git add .
 
 ### To Commit Staged Changes
 
-Once you have the files you want to commit staged, you then commit them to the repository. When you commit your changes, you add a commit message, which should explain, in the present tense, what this commit does. 
+Once you have the files you want to commit staged, you then commit them to the repository. When you commit your changes, you add a commit message, which should explain, in the present tense, what this commit does.
 
 Commits can be easily rolled back, so you can think of a commit kind of like taking a backup of the repository, that you can easily revert to if issues arise.
 
