@@ -4,6 +4,6 @@ A brief overview of what this article covers
 
 ## Prerequisites
 
-## Commands
+## Command(s)/Script(s)
 
 ## More Information

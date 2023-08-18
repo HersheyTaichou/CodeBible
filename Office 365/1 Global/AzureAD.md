@@ -60,4 +60,4 @@ Connect-AzureAD -TenantId domain.onmicrosoft.com
 
 ## More Information
 
-[AzureAD](https://learn.microsoft.com/en-us/powershell/module/azuread/)
+[AzureAD Module](https://learn.microsoft.com/en-us/powershell/module/azuread/)

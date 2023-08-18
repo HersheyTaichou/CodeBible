@@ -47,3 +47,5 @@ Connect-SPOService -Credential $creds -Url https://tenant-admin.sharepoint.com -
 ## More Information
 
 [Connect to SharePoint Online](https://learn.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
+
+[Microsoft.Online.SharePoint.PowerShell Module](https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/)

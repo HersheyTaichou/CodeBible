@@ -1,24 +1,37 @@
 # Groups in Exchange Online
 
-## Bulk Add members to DL
+The following are scripts for working with groups in Microsoft Online.
 
-Use the following commands to add all the listed emails in a CSV to one distribution list
-
-```PowerShell
-$Members = Import-CSV Members.csv
-Add-DistributionGroupMember -Identity group@domain.com -Member $Member
-```
-
-## Get members for a type of group (One File)
-
-The following scripts will output one CSV file with the following format
+For a table like the following, use the (One File) scripts
 
 | Group name       | Members                            |
 |------------------|------------------------------------|
 | <group1@domain.com> | <user1@domain.com>; <user2@domain.com> |
 | <group2@domain.com> | <user1@domain.com>; <user3@domain.com> |
 
-### All Distribution groups
+For one file per group, with just the members of that group, use the (Per Group) scripts
+
+| Members            |
+|--------------------|
+| <user1@domain.com> |
+| <user1@domain.com> |
+
+## Prerequisites
+
+Before running these scripts, you will need to connect to [Exchange Online](../1%20Global/ExchangeOnlineManagement.md)
+
+## Scripts
+
+### Bulk Add members to DL
+
+Use the following commands to add all the listed emails in a CSV to one distribution list. The CSV should have only one column with a list of email addresses.
+
+```PowerShell
+$Members = Import-CSV Members.csv
+Add-DistributionGroupMember -Identity group@domain.com -Member $Members
+```
+
+### Get All Distribution groups with Members (One File)
 
 ```PowerShell
 $GroupList = Get-DistributionGroup
@@ -40,7 +53,7 @@ ForEach ($Group in $GroupList) {
 $GroupsWMembers | Export-CSV "DL-Members.csv" -NoTypeInformation
 ```
 
-### All Shared Mailboxes
+### Get All Shared Mailboxes with Members (One File)
 
 ```PowerShell
 $GroupList = Get-Mailbox -RecipientTypeDetails SharedMailbox -ResultSize:Unlimited
@@ -64,7 +77,7 @@ ForEach ($Group in $GroupList) {
 $GroupsWMembers | Export-CSV "Shared-Members.csv" -NoTypeInformation
 ```
 
-### All Microsoft 365 Groups
+### Get All Microsoft 365 Groups with Members (One File)
 
 ```PowerShell
 $GroupList = Get-UnifiedGroup
@@ -88,16 +101,7 @@ ForEach ($Group in $GroupList) {
 $GroupsWMembers | Export-CSV "O365-Members.csv" -NoTypeInformation
 ```
 
-## Get members for a type of group
-
-The following scripts will output one CSV file for each group, each with the following format
-
-| Members                            |
-|------------------------------------|
-| <user1@domain.com> |
-| <user1@domain.com> |
-
-### Distribution groups
+### Get All Distribution Groups with Members (Per Group)
 
 ```PowerShell
 $GroupList = Get-DistributionGroup
@@ -108,7 +112,7 @@ Foreach($Group In $GroupList) {
 }
 ```
 
-### Shared Mailboxes
+### Get All Shared Mailboxes with Members (Per Group)
 
 ```PowerShell
 $GroupList = Get-Mailbox -RecipientTypeDetails SharedMailbox -ResultSize:Unlimited
@@ -118,7 +122,7 @@ Foreach($Group In $GroupList) {
 }
 ```
 
-### Microsoft 365 Groups
+### Get All Microsoft 365 Groups with Members (Per Group)
 
 ```PowerShell
 $GroupList = Get-UnifiedGroup
@@ -128,7 +132,7 @@ Foreach($Group In $GroupList) {
 }
 ```
 
-## Exchange Distribution Group Membership Logs
+### Exchange Distribution Group Membership Logs
 
 1. sign in to the Exchange Admin Center.
 2. go to compliance management > auditing.

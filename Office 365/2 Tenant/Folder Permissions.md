@@ -1,14 +1,24 @@
-# Get All Calendar/Contact/Root folder Permissions
+# Generate a Report of Mailbox Folder Permissions
+
+The below script will gather all the recipient accounts, then gather anyone that has access to the Calendar, Contacts, or root folder
+
+## Prerequisites
+
+Before running this script, you will need to connect to [Exchange Online](../1%20Global/ExchangeOnlineManagement.md)
+
+## Script
+
+Copy and paste the whole block into PowerShell, or a ps1 file, then run it.
 
 ```PowerShell
-$AllUsers = Get-Mailbox -ResultSize:Unlimited
+$AllUsers = Get-Recipient -ResultSize:Unlimited
 $allUserDetails = @()
 $Counter=0
 ForEach ($user in $allusers) {
     $Counter++
     Write-Progress -Id 0 -Activity 'Processing Users' -CurrentOperation $user -PercentComplete (($Counter / $allusers.count) * 100)
-    $UPNCalendar = $User.UserPrincipalName + ":\Calendar"
-    $calDetails = Get-EXOMailboxFolderPermission -Identity $UPNCalendar
+    $UPNCalendar = ($user.ExchangeGuid).ToString() + ":\Calendar"
+    $calDetails = Get-MailboxFolderPermission -Identity $UPNCalendar
     $CounterA=0
     forEach ($entry in $calDetails) {
         $CounterA++
@@ -20,8 +30,8 @@ ForEach ($user in $allusers) {
         $Properties =  [ordered]@{'Identity'=$entry.Identity;'FolderName'=$entry.FolderName;'User'=$entry.User;'AccesRights'=$accessRights;'SharingPermissionFlags'=$entry.SharingPermissionFlags}
         $allUserDetails += New-Object -TypeName PSObject -Property $Properties
     }
-    $UPNContacts = $User.UserPrincipalName + ":\Contacts"
-    $conDetails = Get-EXOMailboxFolderPermission -Identity $UPNContacts
+    $UPNContacts = ($user.ExchangeGuid).ToString() + ":\Contacts"
+    $conDetails = Get-MailboxFolderPermission -Identity $UPNContacts
     $CounterA=0
     forEach ($entry in $conDetails) {
         $CounterA++
@@ -33,8 +43,8 @@ ForEach ($user in $allusers) {
         $Properties =  [ordered]@{'Identity'=$entry.Identity;'FolderName'=$entry.FolderName;'User'=$entry.User;'AccesRights'=$accessRights;'SharingPermissionFlags'=$entry.SharingPermissionFlags}
         $allUserDetails += New-Object -TypeName PSObject -Property $Properties
     }
-    $RootFolder = $User.UserPrincipalName + ":\"
-    $fullDetails = Get-EXOMailboxFolderPermission -Identity $RootFolder
+    $RootFolder = ($user.ExchangeGuid).ToString() + ":\"
+    $fullDetails = Get-MailboxFolderPermission -Identity $RootFolder
     $CounterA=0
     forEach ($entry in $fullDetails) {
         $CounterA++
@@ -49,5 +59,4 @@ ForEach ($user in $allusers) {
 }
 
 $allUserDetails | export-csv C:\Temp\All-Calendar-Contacts-Details.csv -NoTypeInformation
-
 ```

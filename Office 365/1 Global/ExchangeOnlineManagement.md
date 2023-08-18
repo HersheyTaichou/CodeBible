@@ -50,4 +50,4 @@ Connect-ExchangeOnline -DelegatedOrganization domain.onmicrosoft.com
 
 [Connect to Exchange Online PowerShell](https://learn.microsoft.com/en-us/powershell/exchange/connect-to-exchange-online-powershell)
 
-[ExchangePowerShell](https://learn.microsoft.com/en-us/powershell/module/exchange/)
+[ExchangePowerShell Module](https://learn.microsoft.com/en-us/powershell/module/exchange/)

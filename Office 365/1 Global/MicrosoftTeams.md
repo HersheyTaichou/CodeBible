@@ -51,4 +51,4 @@ Connect-MicrosoftTeams -TenantID domain.onmicrosoft.com
 
 [Install Microsoft Teams PowerShell Module](https://learn.microsoft.com/en-us/microsoftteams/teams-powershell-install)
 
-[MicrosoftTeamsPowerShell](https://learn.microsoft.com/en-us/powershell/module/teams)
+[MicrosoftTeamsPowerShell Module](https://learn.microsoft.com/en-us/powershell/module/teams)
