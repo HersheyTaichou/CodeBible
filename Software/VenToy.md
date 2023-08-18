@@ -8,7 +8,7 @@ More information can be found on the [Ventoy website](https://www.ventoy.net/)
 
 The latest release can be downloaded from the [Ventoy GitHub](https://github.com/ventoy/Ventoy/releases) releases page.
 
-You will want to download the Windows zip file, then extract it. 
+You will want to download the Windows zip file, then extract it.
 
 Run the Ventoy2Disk.exe file, and insert the USB drive you want to use. Make sure the correct USB drive is selected, then click Install.
 

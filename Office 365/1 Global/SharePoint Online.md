@@ -2,29 +2,37 @@
 
 The Microsoft.Online.SharePoint.PowerShell module is used to connect to SharePoint Online and then run commands against objects in SharePoint
 
-## Install the module
+## Prerequisites
+
+### Install
+
+Before you can connect to SharePoint Online for the first time on a machine, you will need to install it. Here is the command to install it:
 
 ```PowerShell
 Install-Module -Name Microsoft.Online.SharePoint.PowerShell
 ```
 
-## Update the module
+### Update
+
+Occasionally, Microsoft will update the module, in that case, you can use the following command to update to the latest version of the module
 
 ```PowerShell
 Update-Module -Name Microsoft.Online.SharePoint.PowerShell 
 ```
 
-## Import the module
+### Import
 
-Normally, you should not need to import it, it should import automatically when you run commands.
+Normally, you should not need to import it, it should import automatically when you run commands, but if you get an error about the command missing, you can try importing the module.
 
 ```PowerShell
 Import-Module -Name Microsoft.Online.SharePoint.PowerShell
 ```
 
-## Connect to SPO
+## Commands
 
-Update the URL to the admin SharePoint site
+### Connect to SPO
+
+Update the URL to the Tenant's admin SharePoint site
 
 ```PowerShell
 Connect-SPOService -Url https://contoso-admin.sharepoint.com
@@ -36,4 +44,6 @@ If you get an error telling you to use Modern Authentication, try the following:
 Connect-SPOService -Credential $creds -Url https://tenant-admin.sharepoint.com -ModernAuth $true -AuthenticationUrl https://login.microsoftonline.com/organizations
 ```
 
-Source: [Connect to SharePoint online](https://learn.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
+## More Information
+
+[Connect to SharePoint Online](https://learn.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)

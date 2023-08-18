@@ -1,10 +1,18 @@
 # Skype for Business Online
 
-## Install the module
+> This module has been superseeded by the MicrosoftTeams module.
 
-Download and install [Skype for Business Online, Windows PowerShell Module](https://www.microsoft.com/en-us/download/details.aspx?id=39366)
+This module is used to connect to Skype for Business Online and manage it through PowerShell.
 
-## Import the module
+## Prerequisites
+
+### Install the module
+
+Unlike most other modules, this one is not installed from a public repository and has to be manually downloaded and installed.
+
+You can download it from Microsoft's [Skype for Business Online, Windows PowerShell Module](https://www.microsoft.com/en-us/download/details.aspx?id=39366) page
+
+### Import the module
 
 Normally, you should not need to import it, it should import automatically when you run commands.
 
@@ -12,7 +20,9 @@ Normally, you should not need to import it, it should import automatically when 
 Import-Module -Name LyncOnlineConnector
 ```
 
-## Connect to Skype for Business Online
+## Commands
+
+### Connect to Skype for Business Online
 
 You may need to adjust the execution policy to use the module
 
