@@ -1,8 +1,16 @@
 # Public Folders in Exchange Online
 
-## Bulk Add users to Public Folders
+The following are scripts that can be useful when working with public folders in Exchange Online
 
-This script can take upwards of 36 hours of continuous running to complete:
+## Prerequisites
+
+Before running these scripts, you will need to connect to [Exchange Online](../1%20Global/ExchangeOnlineManagement.md)
+
+## Scripts
+
+### Bulk Add users to Public Folders
+
+This script can take a significant amount of time to complete, as it goes through each folder in Exchange and changes the permissions for them.
 
 ```PowerShell
 # Get a list of all the folders to change

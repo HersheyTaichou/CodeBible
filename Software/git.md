@@ -41,7 +41,7 @@ See the git documentation for more configuration options
 
 ### Initialize a New Local Repository
 
-To create a new  local repository, browse to the root location for the repo, then run this command
+To create a new local repository, browse to the root location for the repo, then run this command
 
 ```PowerShell
 git init 

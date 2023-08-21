@@ -4,6 +4,4 @@ A brief overview of what this article covers
 
 ## Prerequisites
 
-## Command(s)/Script(s)
-
-## More Information
+## Command(s)/Script(s)/Process
