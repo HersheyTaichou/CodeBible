@@ -1,8 +1,31 @@
 # Working with Licenses
 
-## Get All Licensed Users
+Various commands and scripts for working with Licenses in Office 365 through Microsoft Graph
+
+## Prerequisites
+
+Before running any of these commands, you will need to connect to [Microsoft Graph](../1%20Global/Microsoft.Graph.md) with the following scopes
+
+- User.Read.All
+
+## Scripts
+
+### Get All Users with Current Licenses
+
+The following script will output a CSV that contains all of the accounts in the tenant and includes what licenses the users are assigned.
 
 ```PowerShell
-Connect-Graph -Scopes User.Read.All, Organization.Read.All
-Get-MgUser -Filter "assignedLicenses/`$count eq 0 and userType eq 'Member'" -ConsistencyLevel eventual -CountVariable unlicensedUserCount -All | Export-Csv "c:\temp\licensed-users.csv" -NoTypeInformation
+$MgUsers = Get-MgUser -All
+$Output =@()
+foreach ($user in $MgUsers) {
+    $Properties = [ordered]@{
+        "DisplayName" = $User.DisplayName
+        "ID" = $user.Id
+        "UserPrincipalName" = $user.UserPrincipalName
+        "Licenses" = (Get-MgUserLicenseDetail -UserId $user.Id).SkuPartNumber -join ";"
+
+    }
+    $Output += New-Object -TypeName PSObject -Property $Properties
+}
+$Output | export-csv LicensedUsers.csv
 ```
