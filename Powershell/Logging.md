@@ -1,6 +1,10 @@
-# Generate Logs from PowerShell Scripts
+# Logging PowerShell Scripts
 
-## Save Terminal Output to a file
+This article contains various ways you can log the output from a script to a machine or file.
+
+## Processes
+
+### Save Terminal Output to a file
 
 > "The Start-Transcript cmdlet creates a record of all or part of a PowerShell session to a text file. The transcript includes all commands that the user types and all output that appears on the console."  
 > &mdash; <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.host/start-transcript>
@@ -19,13 +23,9 @@ Then place this command at the end of your script or batch of commands
 Stop-Transcript
 ```
 
-### Documentation
+### Save Details to Event Viewer
 
-[Start-Transcript](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.host/start-transcript)
-
-## Save Details to Event Viewer
-
-### Create a Log Source
+#### Create a Log Source
 
 First, you need to create a new log source. You should only have to run this once per machine, per source name.
 
@@ -37,7 +37,7 @@ First, you will want to change `-LogName` to the Event Log you want the logs sav
 
 Second, you define the `-Source` for your logs. This must be a unique string across all the system's Event Logs.
 
-### Write Logs
+#### Write Logs
 
 Now that we have a source established for our logs, we want to send entries to Event Viewer:
 
@@ -51,3 +51,7 @@ Write-EventLog -LogName "System" -Source "Script" -EntryType "Information" -Even
 - Second, we tell it what type of entry it is ([See the Options here](https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.eventlogentrytype?view=windowsdesktop-7.0#fields)).  
 - Next, we put in the Event ID, which helps with filtering in Event Viewer and can be used to help the end user with researching errors for more info.  
 - Then, finally, we tell it what the actual log message is
+
+## More Information
+
+[Start-Transcript](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.host/start-transcript)
