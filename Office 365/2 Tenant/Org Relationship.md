@@ -1,6 +1,14 @@
-# Share Calendars outside of the organization - Organization Relationships
+# Organization Relationships
 
-## Use the Exchange admin center to create an organizational relationship
+This is the process to set up an organizational relationship, which is primarily used to share some calendar details between two different organizations.
+
+## Prerequisites
+
+You will need access to one or both of the company's Office 365 Tenants with an account that has the requisite permissions to make changes in the Exchange Admin Center. To troubleshoot, you will need to log in to [Exchange Online](../1%20Global/ExchangeOnlineManagement.md) in PowerShell
+
+## Process
+
+### Use the Exchange admin center to create an organizational relationship
 
 Before starting, it is recommended that you create a mail-enabled security group to restrict who is allowed to share their calendar externally.
 
@@ -14,7 +22,9 @@ Before starting, it is recommended that you create a mail-enabled security group
    2. Set which users can share calendar free/busy information.
 7. Click save to create the organization relationship.
 
-## Troubleshoot an Organizational Relationship
+## More Information
+
+### Troubleshoot an Organizational Relationship
 
 In a perfect world the other organization will create the reciprocated organizational relationship and then end users can happily share calendar information.  Often found this is rarely the case so here are some troubleshooting steps which might make life a little easier:
 
@@ -36,7 +46,7 @@ IsValid               : True
 ObjectState           : Unchanged
 ```
 
-Pay particular attention to the TargetApplicationUri, DomainNames and TargetAutodiscoverEpr fields. We want to confirm those fields match what was set for the organizational relationship.
+Pay particular attention to the TargetApplicationUri, DomainNames, and TargetAutodiscoverEpr fields. We want to confirm those fields match what was set for the organizational relationship.
 
 Next, we want to get the details of the relationship on our end
 
@@ -124,7 +134,7 @@ No Significant Issues to Report
 COMPLETE.
 ```
 
-## Extended Troubleshooting
+### Extended Troubleshooting
 
 Now is probably an appropriate time to find out if the other tenant has a hybrid environment and if it is set up correctly. The best way to validate is if the online and on-prem can share calendar information.  If this is the case then the additional domain of domain.mail.onmicrosoft.com may also need to be included in the list of domains for the org relationship.  But this should also come up when viewing the federated info.
 If this is not the case then it is down to a permissions issue.
@@ -153,6 +163,6 @@ This will traverse each mailbox and make permission changes where needed and thr
 
 Calendar sharing should now be functional.
 
-Of course, there are more customizable options when setting up organizational relationships etc but this is the majority of it when it comes to setup/troubleshooting.
+Of course, there are more customizable options when setting up organizational relationships, etc but this is the majority of it when it comes to setup/troubleshooting.
 
 Are you still having issues? Call Microsoft

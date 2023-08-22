@@ -1,12 +1,20 @@
 # Get All Forwards and Rules
 
-## Forwards
+The following scripts will generate reports on any forward in place on a mailbox or setup via a rule in the mailbox.
+
+## Prerequisites
+
+Before running either of these scripts, you will need to connect to [Exchange Online](../1%20Global/ExchangeOnlineManagement.md)
+
+## Commands
+
+### All Forwards
 
 ```PowerShell
 Get-Mailbox -ResultSize unlimited | Select UserPrincipalName,ForwardingSmtpAddress,DeliverToMailboxAndForward | where {$Null -ne $_.ForwardingSmtpAddress} | Export-Csv C:\Temp\Forwards.csv -NoTypeInformation
 ```
 
-## Get All Rules to Forward Emails
+### Get All Rules to Forward Emails Externally
 
 ```PowerShell
 $domains = Get-AcceptedDomain

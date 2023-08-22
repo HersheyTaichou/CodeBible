@@ -1,15 +1,19 @@
 # WizTree
 
-WizTree is like WinDirStat, but faster
+WizTree allows you to see what is using up the space on a computer. It is very much like WinDirStat, but faster.
 
-## Installation
+## How to Install
 
-### Manually
+You can download the installer from the [Disk Analyzer](https://diskanalyzer.com/) website and run it.
 
-You can download it from [their website](https://diskanalyzer.com/)
+It can also be installed with Chocolatey:
 
-### Chocolatey
+```PowerShell
+choco install wiztree
+```
 
-Run the following in PowerShell, if you have Chocolatey installed already
+## How to Use
 
-`choco install wiztree`
+In the top left corner, select the drive or folder to scan, then click Scan
+
+After just a few moments, you should get a breakdown of folders and a block diagram at the bottom demonstrating where the space in the drive or folder is being used up.
