@@ -2,6 +2,9 @@
 
 Provide a brief overview of the software, what it is, and what it does.
 
+> A quote about the software  
+> &mdash; source
+
 ## How to Install
 
 1. download the software from [their website](https://examplesite.com)
