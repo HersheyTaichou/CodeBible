@@ -77,59 +77,103 @@ The following individual permissions are available:
 
 The available roles, along with the permissions that they assign, are described in the following list:
 
-- **Author**
-  - CreateItems[^CreateItems]
-  - DeleteOwnedItems[^DeleteOwnedItems]
-  - EditOwnedItems[^EditOwnedItems]
-  - FolderVisible[^FolderVisible]
-  - ReadItems[^ReadItems]
-- **Contributor**
-  - CreateItems[^CreateItems]
-  - FolderVisible[^FolderVisible]
-- **Editor**
-  - CreateItems[^CreateItems]
-  - DeleteAllItems[^DeleteAllItems]
-  - DeleteOwnedItems[^DeleteOwnedItems]
-  - EditAllItems[^EditAllItems]
-  - EditOwnedItems[^EditOwnedItems]
-  - FolderVisible[^FolderVisible]
-  - ReadItems[^ReadItems]
-- **None**
-  - FolderVisible[^FolderVisible]
-- **NonEditingAuthor**
-  - CreateItems[^CreateItems]
-  - FolderVisible[^FolderVisible]
-  - ReadItems[^ReadItems]
-- **Owner**
-  - CreateItems[^CreateItems]
-  - CreateSubfolders[^CreateSubfolders]
-  - DeleteAllItems[^DeleteAllItems]
-  - DeleteOwnedItems[^DeleteOwnedItems]
-  - EditAllItems[^EditAllItems]
-  - EditOwnedItems[^EditOwnedItems]
-  - FolderContact[^FolderContact]
-  - FolderOwner[^FolderOwner]
-  - FolderVisible[^FolderVisible]
-  - ReadItems[^ReadItems]
-- **PublishingEditor**
-  - CreateItems[^CreateItems]
-  - CreateSubfolders[^CreateSubfolders]
-  - DeleteAllItems[^DeleteAllItems]
-  - DeleteOwnedItems[^DeleteOwnedItems]
-  - EditAllItems[^EditAllItems]
-  - EditOwnedItems[^EditOwnedItems]
-  - FolderVisible[^FolderVisible]
-  - ReadItems[^ReadItems]
-- **PublishingAuthor**
-  - CreateItems[^CreateItems]
-  - CreateSubfolders[^CreateSubfolders]
-  - DeleteOwnedItems[^DeleteOwnedItems]
-  - EditOwnedItems[^EditOwnedItems]
-  - FolderVisible[^FolderVisible]
-  - ReadItems[^ReadItems]
-- **Reviewer**
-  - FolderVisible[^FolderVisible]
-  - ReadItems[^ReadItems]
+<details>
+<summary>Author</summary>
+
+- CreateItems[^CreateItems]
+- DeleteOwnedItems[^DeleteOwnedItems]
+- EditOwnedItems[^EditOwnedItems]
+- FolderVisible[^FolderVisible]
+- ReadItems[^ReadItems]
+
+</details>
+
+<details>
+<summary>Contributor</summary>
+
+- CreateItems[^CreateItems]
+- FolderVisible[^FolderVisible]
+
+</details>
+
+<details>
+<summary>Editor</summary>
+
+- CreateItems[^CreateItems]
+- DeleteAllItems[^DeleteAllItems]
+- DeleteOwnedItems[^DeleteOwnedItems]
+- EditAllItems[^EditAllItems]
+- EditOwnedItems[^EditOwnedItems]
+- FolderVisible[^FolderVisible]
+- ReadItems[^ReadItems]
+
+</details>
+
+<details>
+<summary>None</summary>
+
+- FolderVisible[^FolderVisible]
+
+</details>
+
+<details>
+<summary>NonEditingAuthor</summary>
+
+- CreateItems[^CreateItems]
+- FolderVisible[^FolderVisible]
+- ReadItems[^ReadItems]
+
+</details>
+
+<details>
+<summary>Owner</summary>
+
+- CreateItems[^CreateItems]
+- CreateSubfolders[^CreateSubfolders]
+- DeleteAllItems[^DeleteAllItems]
+- DeleteOwnedItems[^DeleteOwnedItems]
+- EditAllItems[^EditAllItems]
+- EditOwnedItems[^EditOwnedItems]
+- FolderContact[^FolderContact]
+- FolderOwner[^FolderOwner]
+- FolderVisible[^FolderVisible]
+- ReadItems[^ReadItems]
+
+</details>
+
+<details>
+<summary>PublishingEditor</summary>
+
+- CreateItems[^CreateItems]
+- CreateSubfolders[^CreateSubfolders]
+- DeleteAllItems[^DeleteAllItems]
+- DeleteOwnedItems[^DeleteOwnedItems]
+- EditAllItems[^EditAllItems]
+- EditOwnedItems[^EditOwnedItems]
+- FolderVisible[^FolderVisible]
+- ReadItems[^ReadItems]
+
+</details>
+
+<details>
+<summary>PublishingAuthor</summary>
+
+- CreateItems[^CreateItems]
+- CreateSubfolders[^CreateSubfolders]
+- DeleteOwnedItems[^DeleteOwnedItems]
+- EditOwnedItems[^EditOwnedItems]
+- FolderVisible[^FolderVisible]
+- ReadItems[^ReadItems]
+
+</details>
+
+<details>
+<summary>Reviewer</summary>
+
+- FolderVisible[^FolderVisible]
+- ReadItems[^ReadItems]
+
+</details>
 
 The following roles apply specifically to calendar folders:
 
