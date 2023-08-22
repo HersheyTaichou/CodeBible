@@ -12,49 +12,30 @@ Copy and paste the whole block into PowerShell, or a ps1 file, then run it.
 
 ```PowerShell
 $AllUsers = Get-Recipient -ResultSize:Unlimited
+$UserFolders = @(":\",":\Calendar",":\Contacts")
 $allUserDetails = @()
 $Counter=0
 ForEach ($user in $allusers) {
     $Counter++
-    Write-Progress -Id 0 -Activity 'Processing Users' -CurrentOperation $user -PercentComplete (($Counter / $allusers.count) * 100)
-    $UPNCalendar = ($user.ExchangeGuid).ToString() + ":\Calendar"
-    $calDetails = Get-MailboxFolderPermission -Identity $UPNCalendar
-    $CounterA=0
-    forEach ($entry in $calDetails) {
-        $CounterA++
-        Write-Progress -Id 1 -ParentId 0 -Activity 'Processing Calendars' -CurrentOperation $entry.user -PercentComplete (($CounterA / $calDetails.count) * 100)
-        $accessRights = ""
-        forEach ($permission in $entry.accessRights) {
-            $accessRights += $permission + "; "
+    Write-Progress -Id 0 -Activity "Processing User" -PercentComplete (($Counter / $allusers.count) * 100)
+    foreach ($Folder in $UserFolders) {
+        $UPNFolder = ($user.ExchangeGuid).ToString() + $Folder
+        $FolderPerms = Get-MailboxFolderPermission -Identity $UPNFolder
+        if ($null -ne $FolderPerms) {
+            $CounterA=0
+            foreach ($entry in $FolderPerms) {
+                $CounterA++
+                Write-Progress -Id 1 -ParentId 0 -Activity "Processing Folder" -PercentComplete (($CounterA / $FolderPerms.count) * 100)
+                $Properties =  [ordered]@{
+                    'Identity'=$entry.Identity;
+                    'FolderName'=$entry.FolderName;
+                    'User'=$entry.User;
+                    'AccesRights'=$entry.accessRights -join ";";
+                    'SharingPermissionFlags'=$entry.SharingPermissionFlags
+                }
+                $allUserDetails += New-Object -TypeName PSObject -Property $Properties
+            }
         }
-        $Properties =  [ordered]@{'Identity'=$entry.Identity;'FolderName'=$entry.FolderName;'User'=$entry.User;'AccesRights'=$accessRights;'SharingPermissionFlags'=$entry.SharingPermissionFlags}
-        $allUserDetails += New-Object -TypeName PSObject -Property $Properties
-    }
-    $UPNContacts = ($user.ExchangeGuid).ToString() + ":\Contacts"
-    $conDetails = Get-MailboxFolderPermission -Identity $UPNContacts
-    $CounterA=0
-    forEach ($entry in $conDetails) {
-        $CounterA++
-        Write-Progress -Id 1 -ParentId 0 -Activity 'Processing Contacts' -CurrentOperation $entry.user -PercentComplete (($CounterA / $conDetails.count) * 100)
-        $accessRights = ""
-        forEach ($permission in $entry.accessRights) {
-            $accessRights += $permission + "; "
-        }
-        $Properties =  [ordered]@{'Identity'=$entry.Identity;'FolderName'=$entry.FolderName;'User'=$entry.User;'AccesRights'=$accessRights;'SharingPermissionFlags'=$entry.SharingPermissionFlags}
-        $allUserDetails += New-Object -TypeName PSObject -Property $Properties
-    }
-    $RootFolder = ($user.ExchangeGuid).ToString() + ":\"
-    $fullDetails = Get-MailboxFolderPermission -Identity $RootFolder
-    $CounterA=0
-    forEach ($entry in $fullDetails) {
-        $CounterA++
-        Write-Progress -Id 1 -ParentId 0 -Activity 'Processing root folders' -CurrentOperation $entry.user -PercentComplete (($CounterA / $fullDetails.count) * 100)
-        $accessRights = ""
-        forEach ($permission in $entry.accessRights) {
-            $accessRights += $permission + "; "
-        }
-        $Properties =  [ordered]@{'Identity'=$entry.Identity;'FolderName'=$entry.FolderName;'User'=$entry.User;'AccesRights'=$accessRights;'SharingPermissionFlags'=$entry.SharingPermissionFlags}
-        $allUserDetails += New-Object -TypeName PSObject -Property $Properties
     }
 }
 
