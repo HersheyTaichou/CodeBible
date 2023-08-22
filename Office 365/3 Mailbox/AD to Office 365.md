@@ -5,6 +5,16 @@ This is often needed in the following scenarios
 - The Office 365 account was previously connected to a different AD account
 - There was a duplicate account in Office 365
 
+## Prerequisites
+
+You will need administrative access to a domain controller and you will need to connect to [Microsoft Graph](../1%20Global/Microsoft.Graph.md) with the following scopes
+
+```PowerShell
+Connect-MgGraph -Scopes "User.ReadWrite.All"
+```
+
+## Process
+
 Here are the steps to resolve
 
 1. Move the user  out of a synced OU

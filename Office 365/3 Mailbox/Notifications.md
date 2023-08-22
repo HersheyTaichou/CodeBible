@@ -1,12 +1,28 @@
 # Disable Events from Email
 
-This command will disable them for the whole company
+> These settings define whether Outlook or Outlook on the web (formerly known as Outlook Web App) automatically discovers events from email messages and adds them to the user's calendar.  
+> &mdash; From [Set-EventsFromEmailConfiguration](https://learn.microsoft.com/en-us/powershell/module/exchange/set-eventsfromemailconfiguration)
+
+## Prerequisites
+
+Before running these commands, you will need to connect to [Exchange Online](../1%20Global/ExchangeOnlineManagement.md)
+
+## Commands
+
+### Reset Permissions for the entire company
 
 ```PowerShell
-Get-Mailbox -RecipientTypeDetails UserMailbox -ResultSize Unlimited | Set-MailboxCalendarConfiguration -EventsFromEmailEnabled $false -CreateEventsFromEmailAsPrivate $true 
-
+Get-Mailbox -RecipientTypeDetails UserMailbox -ResultSize Unlimited | Set-EventsFromEmailConfiguration -ResetSettings
 ```
 
-## Documentation
+### Disable processing for the entire company
 
-<http://www.michev.info/Blog/Post/174/Events-from-Email-in-Office-365-and-how-to-disable-them>
+```PowerShell
+Get-Mailbox -RecipientTypeDetails UserMailbox -ResultSize Unlimited | Set-EventsFromEmailConfiguration -FlightReservationProcessingLevel Disabled -LodgingReservationProcessingLevel Disabled -ParcelDeliveryProcessingLevel Disabled -RentalCarReservationProcessingLevel Disabled
+```
+
+## More Information
+
+[Events from Email in Office 365 and how to disable them](http://www.michev.info/Blog/Post/174/Events-from-Email-in-Office-365-and-how-to-disable-them)
+
+[Set-EventsFromEmailConfiguration](https://learn.microsoft.com/en-us/powershell/module/exchange/set-eventsfromemailconfiguration)

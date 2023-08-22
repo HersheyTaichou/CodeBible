@@ -6,7 +6,9 @@ Various commands and scripts for working with Licenses in Office 365 through Mic
 
 Before running any of these commands, you will need to connect to [Microsoft Graph](../1%20Global/Microsoft.Graph.md) with the following scopes
 
-- User.Read.All
+```PowerShell
+Connect-MgGraph -Scopes "User.Read.All"
+```
 
 ## Scripts
 
