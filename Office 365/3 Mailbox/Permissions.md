@@ -64,43 +64,88 @@ Set-MailboxFolderPermission user@domain.com:\Calendar -User user@domain.com -Acc
 
 The following individual permissions are available:
 
-- **CreateItems**[^CreateItems]   The user can create items in the specified folder.
-- **CreateSubfolders**   The user can create subfolders in the specified folder.
-- **DeleteAllItems**   The user can delete all items in the specified folder.
-- **DeleteOwnedItems**   The user can only delete items that they created from the specified folder.
-- **EditAllItems**   The user can edit all items in the specified folder.
-- **EditOwnedItems**   The user can only edit items that they created in the specified folder.
-- **FolderContact**   The user is the contact for the specified public folder.
-- **FolderOwner**   The user is the owner of the specified folder. The user can view the folder, move the folder, and create subfolders. The user can't read items, edit items, delete items, or create items.
-- **FolderVisible**   The user can view the specified folder, but can't read or edit items within the specified public folder.
-- **ReadItems**   The user can read items within the specified folder.
+- CreateItems[^CreateItems]
+- CreateSubfolders[^CreateSubfolders]
+- DeleteAllItems[^DeleteAllItems]
+- DeleteOwnedItems[^DeleteOwnedItems]
+- EditAllItems[^EditAllItems]
+- EditOwnedItems[^EditOwnedItems]
+- FolderContact[^FolderContact]
+- FolderOwner[^FolderOwner]
+- FolderVisible[^FolderVisible]
+- ReadItems[^ReadItems]
 
 The available roles, along with the permissions that they assign, are described in the following list:
 
-- **Author**   CreateItems[^CreateItems], DeleteOwnedItems, EditOwnedItems, FolderVisible, ReadItems
-- **Contributor**   CreateItems, FolderVisible
-- **Editor**   CreateItems, DeleteAllItems, DeleteOwnedItems, EditAllItems, EditOwnedItems, FolderVisible, ReadItems
-- **None**   FolderVisible
-- **NonEditingAuthor**   CreateItems, FolderVisible, ReadItems
-- **Owner**   CreateItems, CreateSubfolders, DeleteAllItems, DeleteOwnedItems, EditAllItems, EditOwnedItems, FolderContact, FolderOwner, FolderVisible, ReadItems
-- **PublishingEditor**   CreateItems, CreateSubfolders, DeleteAllItems, DeleteOwnedItems, EditAllItems, EditOwnedItems, FolderVisible, ReadItems
-- **PublishingAuthor**   CreateItems, CreateSubfolders, DeleteOwnedItems, EditOwnedItems, FolderVisible, ReadItems
-- **Reviewer**   FolderVisible, ReadItems
+- **Author**
+  - CreateItems[^CreateItems]
+  - DeleteOwnedItems[^DeleteOwnedItems]
+  - EditOwnedItems[^EditOwnedItems]
+  - FolderVisible[^FolderVisible]
+  - ReadItems[^ReadItems]
+- **Contributor**
+  - CreateItems[^CreateItems]
+  - FolderVisible[^FolderVisible]
+- **Editor**
+  - CreateItems[^CreateItems]
+  - DeleteAllItems[^DeleteAllItems]
+  - DeleteOwnedItems[^DeleteOwnedItems]
+  - EditAllItems[^EditAllItems]
+  - EditOwnedItems[^EditOwnedItems]
+  - FolderVisible[^FolderVisible]
+  - ReadItems[^ReadItems]
+- **None**
+  - FolderVisible[^FolderVisible]
+- **NonEditingAuthor**
+  - CreateItems[^CreateItems]
+  - FolderVisible[^FolderVisible]
+  - ReadItems[^ReadItems]
+- **Owner**
+  - CreateItems[^CreateItems]
+  - CreateSubfolders[^CreateSubfolders]
+  - DeleteAllItems[^DeleteAllItems]
+  - DeleteOwnedItems[^DeleteOwnedItems]
+  - EditAllItems[^EditAllItems]
+  - EditOwnedItems[^EditOwnedItems]
+  - FolderContact[^FolderContact]
+  - FolderOwner[^FolderOwner]
+  - FolderVisible[^FolderVisible]
+  - ReadItems[^ReadItems]
+- **PublishingEditor**
+  - CreateItems[^CreateItems]
+  - CreateSubfolders[^CreateSubfolders]
+  - DeleteAllItems[^DeleteAllItems]
+  - DeleteOwnedItems[^DeleteOwnedItems]
+  - EditAllItems[^EditAllItems]
+  - EditOwnedItems[^EditOwnedItems]
+  - FolderVisible[^FolderVisible]
+  - ReadItems[^ReadItems]
+- **PublishingAuthor**
+  - CreateItems[^CreateItems]
+  - CreateSubfolders[^CreateSubfolders]
+  - DeleteOwnedItems[^DeleteOwnedItems]
+  - EditOwnedItems[^EditOwnedItems]
+  - FolderVisible[^FolderVisible]
+  - ReadItems[^ReadItems]
+- **Reviewer**
+  - FolderVisible[^FolderVisible]
+  - ReadItems[^ReadItems]
+
 The following roles apply specifically to calendar folders:
+
 - **AvailabilityOnly**   View only availability data
 - **LimitedDetails**   View availability data with subject and location
 
 [^CreateItems]: The user can create items in the specified folder.
-
-- **CreateSubfolders**   The user can create subfolders in the specified folder.
-- **DeleteAllItems**   The user can delete all items in the specified folder.
-- **DeleteOwnedItems**   The user can only delete items that they created from the specified folder.
-- **EditAllItems**   The user can edit all items in the specified folder.
-- **EditOwnedItems**   The user can only edit items that they created in the specified folder.
-- **FolderContact**   The user is the contact for the specified public folder.
-- **FolderOwner**   The user is the owner of the specified folder. The user can view the folder, move the folder, and create subfolders. The user can't read items, edit items, delete items, or create items.
-- **FolderVisible**   The user can view the specified folder, but can't read or edit items within the specified public folder.
-- **ReadItems**   The user can read items within the specified folder.
+[^CreateSubfolders]: The user can create subfolders in the specified folder.
+[^DeleteAllItems]: The user can delete all items in the specified folder.
+[^DeleteOwnedItems]: The user can only delete items that they created from the specified folder.
+[^EditAllItems]: The user can edit all items in the specified folder.
+[^EditOwnedItems]: The user can only edit items that they created in the specified folder.
+[^FolderContact]: The user is the contact for the specified public folder.
+[^FolderOwner]: The user is the owner of the specified folder. The user can view the folder, move the folder, and create subfolders. The user can't read items, edit items, delete items, or create items.
+[^FolderVisible]: The user can view the specified folder, but can't read or edit items within the specified public folder.
+[^ReadItems]: The user can read items within the specified folder.
 
 ### Add user as Delegate
 
