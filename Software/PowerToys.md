@@ -28,3 +28,15 @@ Here is what the zones look like:
 ![FancyZones Example](../Resources/u4z6eBt5ty.jpg)
 
 You can see the one and two partly obscured by the line from the overlapping zones along the top.
+
+### Paste as Plain Text
+
+This is useful when you just need unformatted text
+
+### Awake
+
+This utility gives you options on keeping your computer awake and how long it should stay awake for
+
+### Mouse Utilities
+
+This has various options related to the mouse and pointer, which can help you find your mouse or highlight it when you click. The latter can be great for screen recording.
