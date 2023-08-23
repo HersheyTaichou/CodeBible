@@ -39,6 +39,22 @@ See the git documentation for more configuration options
 
 ## How to Use
 
+Git has a lot of commands, here are some of the ones I commonly use, with their definition and a link to the documentation:
+
+| Command      | Definition                                                      | Link                                    |
+|--------------|-----------------------------------------------------------------|-----------------------------------------|
+| git init     | Create an empty Git repository or reinitialize an existing one. | <https://git-scm.com/docs/git-init>     |
+| git add      | Add file contents to the index                                  | <https://git-scm.com/docs/git-add>      |
+| git commit   | Record changes to the repository                                | <https://git-scm.com/docs/git-commit>   |
+| git status   | Show the working tree status                                    | <https://git-scm.com/docs/git-status>   |
+| git branch   | List, create, or delete branches                                | <https://git-scm.com/docs/git-branch>   |
+| git switch   | Switch branches                                                 | <https://git-scm.com/docs/git-switch>   |
+| git restore  | Restore working tree files                                      | <https://git-scm.com/docs/git-restore>  |
+| git checkout | Switch branches or restore working tree files                   | <https://git-scm.com/docs/git-checkout> |
+| git merge    | Join two or more development histories together                 | <https://git-scm.com/docs/git-merge>    |
+| git revert   | Revert some existing commits                                    | <https://git-scm.com/docs/git-revert>   |
+| git rebase   | Reapply commits on top of another base tip                      | <https://git-scm.com/docs/git-rebase>   |
+
 ### Initialize a New Local Repository
 
 To create a new local repository, browse to the root location for the repo, then run this command
@@ -49,9 +65,9 @@ git init
 
 ### Stage Changes for Commit
 
-When working with files, when you are ready to take save the changes you have made so far, you want to stage those changes, which tells Git what changed files you want to commit to the repository. You can either stage just some of the changes so far, by specifying the files you want to commit or stage all the files.
+When working with files, when you are ready to save the changes you have made so far, you want to stage those changes, which tells Git what changed files you want to commit to the repository. You can either stage just some of the changes so far, by specifying the files you want to commit or stage all the files.
 
-To stage just one file, add it to the staging area:
+To stage just one file, add it to the staging area by name:
 
 ```PowerShell
 git add filename
@@ -75,7 +91,7 @@ To commit the changes with just a short message you can add -m to the commit com
 git commit -m "Adds some files"
 ```
 
-If you want to do a longer commit message, run the command without -m and it should open the default text editor. You can then add a longer commit message, then save and close it to use that message.  
+If you want to do a longer commit message, run the command without -m and it should open your default text editor. You can then add a longer commit message, then save and close it to use that message.  
 **Note:** The first line of the commit should still be a short overview of the changes, with more details on the following lines.
 
 ```PowerShell
