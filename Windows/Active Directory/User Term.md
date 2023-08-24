@@ -41,10 +41,12 @@ Set the description to the disabled date
 Set-ADObject -Identity $Username -Description "Disabled $(get-date -Format 'yyyy/MM/dd')"
 ```
 
-Reset the user's password
+Generate a random 20-character string and set the user's password to it:
 
 ```PowerShell
-Set-ADAccountPassword -Identity $Username -Reset -NewPassword (ConvertTo-SecureString -AsPlainText 'Example Password!!!!1' -Force)
+$Password = -join ((33..126) | Get-Random -Count 20 | ForEach-Object {[char]$_})
+$Password
+Set-ADAccountPassword -Identity $Username -Reset -NewPassword (ConvertTo-SecureString -AsPlainText -String $Password -Force)
 ```
 
 Disable the user's AD account
