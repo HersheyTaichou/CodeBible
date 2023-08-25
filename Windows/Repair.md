@@ -103,7 +103,7 @@ The easiest way to do that remotely is:
 
 ```PowerShell
 Remove-Computer -WorkgroupName TEMP -UnjoinDomainCredential $cred
-Add-Computer -Credential $cred -DomainName corp.chartis.com
+Add-Computer -Credential $cred -DomainName corp.domain.com
 ```
 
 Run this command to confirm the domain trust is fixed:
