@@ -24,10 +24,10 @@
 $Script:Customers = @()
 class Customers : System.Management.Automation.IValidateSetValuesGenerator {
     [String[]] GetValidValues() {
-        If (Test-Path "customers.json") {
+        If (Test-Path "$env:appdata\Azure\customers.json") {
             $Script:Customers = Get-Content -Raw customers.json | Convertfrom-Json
         } else {
-
+            Get-AvailableCustomers
         }
         Return ($Script:Customers).Name
     }
@@ -42,6 +42,10 @@ function Get-AvailableCustomers {
 }
 
 function Connect-Service {
+    if 
+}
+
+{
     param (
         [Parameter(Mandatory=$true)] 
         [ValidateSet("ExchangeOnline","MgGraph")]
@@ -56,7 +60,6 @@ function Connect-Service {
         $Customer = $Script:Customers | Where-Object {$_.Name -eq "$Client"}
         $message = "Run the following command to connect to Microsoft Graph as " + $Customer.Name + "`nConnect-MgGraph -ClientId " + $Customer.CustomerId
     }
-    Write-Host $message
-}
+    Write-Host $message}
 
 Export-ModuleMember -Function Connect-Service, Get-AvailableCustomers

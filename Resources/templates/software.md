@@ -7,7 +7,7 @@ Provide a brief overview of the software, what it is, and what it does.
 
 ## How to Install
 
-1. download the software from [their website](https://examplesite.com)
+1. Download the software from [their website](https://examplesite.com)
 2. Run the installer
 3. Change settings (if needed)
 
