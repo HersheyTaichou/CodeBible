@@ -25,7 +25,7 @@ So, for my setup, I have it divided into 4 equal zones, then the top two zones a
 
 Here is what the zones look like:
 
-![FancyZones Example](../Resources/u4z6eBt5ty.jpg)
+![FancyZones Example](../Resources/images/u4z6eBt5ty.jpg)
 
 You can see the one and two partly obscured by the line from the overlapping zones along the top.
 

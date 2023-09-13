@@ -1,7 +1,7 @@
 # Fix for Greyed-out DNS Suffixes
 
 If this is what the DNS area in Networking looks like:  
-![An image of the DNS Suffix settings greyed out](../Resources/GreyDNSSuffix.png)
+![An image of the DNS Suffix settings greyed out](../Resources/Images/GreyDNSSuffix.png)
 
 This will commonly cause slow connection speeds when attempting to load any websites/Outlook from outside of a corporate network environment (from home, etc)
 

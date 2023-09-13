@@ -9,7 +9,7 @@ The fix for this is to set a different attribute for the user, then tell the Syn
 1. Log into the server or computer that manages the sync
 2. Open the Synchronization Rules Editor as an admin
 3. Make sure the direction is set to Inbound, then click Add new rule.  
-   ![Image of the settings](../../Resources/HideFromGAL1.png)
+   ![Image of the settings](../../Resources/images/HideFromGAL1.png)
 4. Under Description, set the following, then click Next
    - Name: msExchHideFromAddressLists  
       - Can be anything descriptive
