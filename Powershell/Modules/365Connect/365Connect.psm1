@@ -42,7 +42,9 @@ function Get-AvailableCustomers {
 }
 
 function Connect-Service {
-    if 
+    if (true) {
+
+    }
 }
 
 {
