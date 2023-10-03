@@ -56,7 +56,7 @@ function Get-AvailableCustomers {
         [Parameter()][bool]$UpdateFile = $false
     )
 
-    If ((Test-Path $CustomerList) -and (Get-ChildItem $CustomerList | Where-Object {$_.LastWriteTime -ge (Get-Date).AddMonths(-6) -and -not($UpdateFile) } )){
+    If ((Test-Path $CustomerList) -and (Get-ChildItem $CustomerList | Where-Object {$_.LastWriteTime -ge (Get-Date).AddMonths(-6)} -and -not($UpdateFile) )){
         $Customers = Get-Content -Raw $CustomerList | Convertfrom-Json
     } else {
         Write-Host "Please log into the Partner Center"
