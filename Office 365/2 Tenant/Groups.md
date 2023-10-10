@@ -48,7 +48,7 @@ ForEach ($Group in $GroupList) {
         }
     }
     $Properties = [ordered]@{'GroupName'=$group;'Members'=$memberList}
-    $GroupsWMembers += New-Object -TypeName PSObject -Property $Properties}
+    $GroupsWMembers += New-Object -TypeName PSObject -Property $Properties
 }
 $GroupsWMembers | Export-CSV "DL-Members.csv" -NoTypeInformation
 ```
@@ -107,8 +107,8 @@ $GroupsWMembers | Export-CSV "O365-Members.csv" -NoTypeInformation
 $GroupList = Get-DistributionGroup
 
 Foreach($Group In $GroupList) {
-    $name = $Group.Name
-    Get-DistributionGroupMember "$group" | Export-csv C:\Temp\Client\$name.csv
+    $name = $Group.DisplayName
+    Get-DistributionGroupMember $group.PrimarySmtpAddress | Export-csv "$name.csv"
 }
 ```
 
@@ -118,7 +118,7 @@ Foreach($Group In $GroupList) {
 $GroupList = Get-Mailbox -RecipientTypeDetails SharedMailbox -ResultSize:Unlimited
 Foreach($Group In $GroupList) {
     $name = $Group.Name
-    Get-MailboxPermission -Identity "$group" | ?{($_.IsInherited -eq $False) -and -not ($_.User -match “NT AUTHORITY”)} | Export-csv C:\Temp\Client\$name.csv
+    Get-MailboxPermission -Identity $group.PrimarySmtpAddress | ?{($_.IsInherited -eq $False) -and -not ($_.User -match “NT AUTHORITY”)} | Export-csv "C:\Temp\Client\$name.csv"
 }
 ```
 
@@ -128,7 +128,7 @@ Foreach($Group In $GroupList) {
 $GroupList = Get-UnifiedGroup
 Foreach($Group In $GroupList) {
     $name = $Group.Name
-    Get-UnifiedGroupLinks -LinkType Member -Identity  | Export-csv C:\Temp\Client\$name.csv
+    Get-UnifiedGroupLinks -LinkType Member -Identity $group.PrimarySmtpAddress | Export-csv "C:\Temp\Client\$name.csv"
 }
 ```
 
