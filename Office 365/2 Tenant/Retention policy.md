@@ -74,10 +74,18 @@ You will need access to the company's Office 365 Tenant with an account that has
    1. Go down to "Mailbox policies" and click on "Manage Mailbox Policies"
    1. Under Retention Policy, click the dropdown and switch the policy
 
-## Run the Policies
+### Run the Policies
 
 Use this command to force the applied policies to run on a mailbox
 
 ```PowerShell
-Start-ManagedFolderAssistant -Identity "User@domain.com"
+Start-ManagedFolderAssistant -Identity "User@domain.com" -FullCrawl
+```
+
+### Review Applied Personal Policies
+
+This command will list any folder with a personal policy applied, including the path and the policy applied to the folder.
+
+```PowerShell
+Get-MailboxFolderStatistics -Identity pfontaine@epochsc.com | where {$_.ArchivePolicy -ne $null} | fl FolderPath,ArchivePolicy
 ```
