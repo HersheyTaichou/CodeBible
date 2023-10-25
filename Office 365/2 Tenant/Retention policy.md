@@ -74,7 +74,7 @@ You will need access to the company's Office 365 Tenant with an account that has
    1. Go down to "Mailbox policies" and click on "Manage Mailbox Policies"
    1. Under Retention Policy, click the dropdown and switch the policy
 
-### Run the Policies
+#### Run the Policies
 
 Use this command to force the applied policies to run on a mailbox
 
