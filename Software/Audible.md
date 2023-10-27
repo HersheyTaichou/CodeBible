@@ -84,7 +84,7 @@ audible download --aax-fallback -a {ASIN Number}
 1. Remove DRM from all aax books in the current directory, storing them in the above directory
 
    ```bash
-   for i in *.aax; do ffmpeg -y -activation_bytes “Activation bytes here” -i "$i" -map_metadata 0 -id3v2_version 3 -codec:a copy -vn "./drm-free/${i%.*}.m4b"; done
+   for i in *.aax; do ffmpeg -y -activation_bytes $(audible activation-bytes) -i "$i" -map_metadata 0 -id3v2_version 3 -codec:a copy -vn "./drm-free/${i%.*}.m4b"; done
    ```
 
 1. AAXC files require a little more work to decrypt
