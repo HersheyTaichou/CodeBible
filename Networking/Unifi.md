@@ -6,10 +6,11 @@ The solution is to install a newer version of Mongo DB, then manually install Un
 
 I DO NOT RECOMMEND doing this in a production environment, as it is not supported by UniFi
 
-1. First, deploy a fresh copy of Debian 10
+1. First, deploy a fresh copy of Debian
 2. Install a supported version of MongoDB
-   - I used [MongoDB 4.4](https://www.mongodb.com/docs/v4.4/tutorial/install-mongodb-on-debian/)
-   - If using a newer version of MongoDB, you may be able to go up to Debian 11
+   - I've tried the following
+     - [MongoDB 4.4](https://www.mongodb.com/docs/v4.4/tutorial/install-mongodb-on-debian/) with Unifi network version 7.4 on Debian 10
+     - [MongoDB 7.0](https://www.mongodb.com/docs/v7.0/tutorial/install-mongodb-on-debian/) with Unifi network version 7.5 on Debian 11
 3. Download the latest version of Unifi Network to the Debian host
    - [Unifi Download Page](https://www.ui.com/download)
 4. Install it with the following command
