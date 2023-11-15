@@ -11,7 +11,7 @@ DISM /Online  /Cleanup-Image /AnalyzeComponentStore ;; Repair-WindowsImage -Onli
 ### PowerShell on Windows 10 and up
 
 ```PowerShell
-DISM /online /Cleanup-Image /StartComponentCleanup  ;; Repair-WindowsImage -Online -RestoreHealth -Verbose ;; sfc /scannow ;; Repair-Volume -DriveLetter C -Scan -Verbose ;; findstr /c:"[SR]" $ENV:windir\Logs\CBS\CBS.log >"C:\temp\sfcdetails_$(Get-date -Format 'yyyy-MM-dd_HHmm').txt"
+Repair-WindowsImage -Online -StartComponentCleanup ;; Repair-WindowsImage -Online -RestoreHealth -Verbose ;; sfc /scannow ;; Repair-Volume -DriveLetter C -Scan -Verbose ;; findstr /c:"[SR]" $ENV:windir\Logs\CBS\CBS.log >"$env:TEMP\sfcdetails_$(Get-date -Format 'yyyy-MM-dd_HHmm').txt"
 ```
 
 ### CMD on Windows 8.1 and below
