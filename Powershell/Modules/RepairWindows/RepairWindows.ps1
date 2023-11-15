@@ -1,3 +1,16 @@
+<#
+.SYNOPSIS
+Run a repair of Windows
+
+.DESCRIPTION
+Uses DISM, SFC and CHKDSK to check for issues in Windows and repair them, if possible.
+
+.EXAMPLE
+Repair-WindowsInstall
+
+.NOTES
+General notes
+#>
 function Repair-WindowsInstall {
     [CmdletBinding()]
     param ()
