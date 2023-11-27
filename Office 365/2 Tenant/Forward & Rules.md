@@ -16,6 +16,8 @@ Get-Mailbox -ResultSize unlimited | Select UserPrincipalName,ForwardingSmtpAddre
 
 ### Get All Rules to Forward Emails Externally
 
+> This was added as a function to the [CodeBible module](../../PowerShell/Modules/CodeBible/README.md) and can be run with `Get-ForwardRules -OnlyExternal`
+
 ```PowerShell
 $domains = Get-AcceptedDomain
 $mailboxes = Get-ExoMailbox -ResultSize Unlimited

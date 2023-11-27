@@ -20,6 +20,12 @@ At the top, it will give you the option to paste a URL or log in to GitHub. You 
 
 Finally, it will ask you where you want to want to store the local copy of your repository.
 
+## CodeBible PowerShell Module
+
+Work has begun on migrating some of the scripts to PowerShell functions, which will be included in a module, so the script can be run with one command. The module can be found [here](PowerShell/Modules/CodeBible/README.md)
+
+The original scripts will remain as-is, for reference or for when you need to run them on a machine but do not want to download and import the module. Migrated functions will have a note before the script, to inform you that it is part of the module.
+
 ## Other Resources
 
 ### Sean McAvinue's Blog and GitHub
@@ -28,8 +34,7 @@ Sean's blog has various articles on PowerShell scripts that work with Microsoft'
 
 [Sean McAvinue - Modern Workplace Blog](https://seanmcavinue.net/)
 
-GitHub page:  
-[smcavinue/AdminSeanMc](https://github.com/smcavinue/AdminSeanMc)
+[smcavinue/AdminSeanMc GitHub](https://github.com/smcavinue/AdminSeanMc)
 
 ## Contribute
 
