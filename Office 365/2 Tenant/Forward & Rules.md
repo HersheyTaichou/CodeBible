@@ -19,9 +19,10 @@ Get-Mailbox -ResultSize unlimited | Select UserPrincipalName,ForwardingSmtpAddre
 ```PowerShell
 $domains = Get-AcceptedDomain
 $mailboxes = Get-Mailbox -ResultSize Unlimited
- 
+
+$RuleArray = @()
+
 foreach ($mailbox in $mailboxes) {
- 
     $forwardingRules = $null
     Write-Host "Checking rules for $($mailbox.displayname) - $($mailbox.primarysmtpaddress)" -foregroundColor Green
     $rules = get-inboxrule -Mailbox $mailbox.primarysmtpaddress
@@ -57,8 +58,8 @@ foreach ($mailbox in $mailboxes) {
                 RuleDescription    = $rule.Description
                 ExternalRecipients = $extRecString
             }
+            $RuleArray += $ruleHash
         }
     }
 }
-
 ```
