@@ -18,7 +18,7 @@ Get-Mailbox -ResultSize unlimited | Select UserPrincipalName,ForwardingSmtpAddre
 
 ```PowerShell
 $domains = Get-AcceptedDomain
-$mailboxes = Get-Mailbox -ResultSize Unlimited
+$mailboxes = Get-ExoMailbox -ResultSize Unlimited
 
 $RuleArray = @()
 
