@@ -99,7 +99,7 @@ function Get-AllMailboxRules {
                             'IsValid' = $Rule.IsValid
                             'ObjectState' = $Rule.ObjectState
                         }
-                        $Return += $Properties
+                        $Return += New-Object -TypeName PSObject -Property $Properties
                     }
                 }
             }
