@@ -4,7 +4,7 @@ How to add rules for specific situations
 
 ## Prerequisites
 
-Before running the PowerShell commands, you will need to connect to [Exchange Online](../1%20Global/ExchangeOnlineManagement.md)
+Administrative access to the server with Azure AD Sync installed
 
 ## Process
 
@@ -36,4 +36,4 @@ This is useful when you want to create dynamic distribution groups based on a us
    Start-ADSyncSyncCycle -PolicyType Initial
    ```
 
-You can now create or edit rules based on departments byu using the CustomAttribute1 field in Exchange Online
+You can now create or edit rules based on departments by using the CustomAttribute1 field in Exchange Online
