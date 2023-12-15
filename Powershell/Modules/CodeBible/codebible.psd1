@@ -51,7 +51,7 @@ Copyright = '(c) Mike Hiersche. All rights reserved.'
 # ProcessorArchitecture = ''
 
 # Modules that must be imported into the global environment prior to importing this module
-RequiredModules = @('ExchangeOnlineManagement')
+RequiredModules = @('ExchangeOnlineManagement','ActiveDirectory')
 
 # Assemblies that must be loaded prior to importing this module
 # RequiredAssemblies = @()
