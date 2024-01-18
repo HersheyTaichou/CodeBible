@@ -6,20 +6,20 @@ function Get-AllMailboxRules {
         $AllMailboxes = Get-EXOMailbox -ResultSize Unlimited
         $Return = @()
         $CounterA = 0
-        $TotalRules = 0
     }
     
     process {
         foreach ($Mailbox in $AllMailboxes) {
                 $CounterA ++
                 $ActivityA = "Processing " + $Mailbox.DisplayName
-                Write-Verbose $ActivityA
+                Write-Progress -Id 0 -Activity $ActivityA -PercentComplete (($CounterA / $AllMailboxes.count) * 100)
                 $Rules = Get-InboxRule -Mailbox $Mailbox.PrimarySmtpAddress
-                $TotalRules += $rules.count
                 if ($Rules) {
-                    $Message = "Found " + $rules.count + " mailbox rules for " + $Mailbox.DisplayName + ". Progress: " + (($CounterA / $AllMailboxes.count) * 100)
-                    Write-Verbose $Message
+                    $CounterB = 0
                     foreach ($rule in $Rules) {
+                        $ActivityB = "Processing " + $rule.DisplayName
+                        $CounterB ++
+                        Write-Progress -Id 0 -Activity $ActivityB -PercentComplete (($CounterB / $Rules.count) * 100)
                         $Properties = [ordered]@{
                             'PrimarySmtpAddress' = $Mailbox.PrimarySmtpAddress
                             'DisplayName' = $Mailbox.DisplayName

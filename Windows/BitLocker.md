@@ -24,6 +24,13 @@ Remove a key protector
 (Get-BitLockerVolume -MountPoint C).KeyProtector[0].KeyProtectorId | Remove-BitLockerKeyProtector -MountPoint C
 ```
 
+Encrypt secondary drives
+
+```PowerShell
+Enable-BitLocker -MountPoint D -EncryptionMethod XtsAes256 -RecoveryPasswordProtector
+Enable-BitLockerAutoUnlock -MountPoint D
+```
+
 ## Documentation
 
 [Add-BitLockerKeyProtector](https://learn.microsoft.com/en-us/powershell/module/bitlocker/add-bitlockerkeyprotector)  
