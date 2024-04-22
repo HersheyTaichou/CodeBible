@@ -82,6 +82,18 @@ Use this command to force the applied policies to run on a mailbox
 Start-ManagedFolderAssistant -Identity "User@domain.com" -FullCrawl
 ```
 
+### Check the Managed Folder Assistant Progress
+
+To check details of MFA processing for a mailbox, use the Export-MailboxDiagnosticsLogs cmdlet.
+
+```PowerShell
+$Log = Export-MailboxDiagnosticLogs -Identity James.Ryan -ExtendedProperties
+$xml = [xml]($Log.MailboxLog)
+$xml.Properties.MailboxTable.Property | Where-Object {$_.Name -like "ELC*"}
+```
+
+[Source and more details](https://practical365.com/understanding-the-exchange-mailbox-folder-assistant/)
+
 ## Troubleshooting
 
 Finding and resolving issues with retention policies not applying
