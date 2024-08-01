@@ -37,7 +37,7 @@ Add-DistributionGroupMember -Identity group@domain.com -Member $Members
 $GroupList = Get-DistributionGroup
 $GroupsWMembers = @()
 
-ForEach ($Group in $GroupList) {
+$GroupsWMembers = ForEach ($Group in $GroupList) {
     $memberList = ''
     $GroupMembers = Get-DistributionGroupMember "$group"
     ForEach($Member in $GroupMembers) {
@@ -48,7 +48,7 @@ ForEach ($Group in $GroupList) {
         }
     }
     $Properties = [ordered]@{'GroupName'=$group;'Members'=$memberList}
-    $GroupsWMembers += New-Object -TypeName PSObject -Property $Properties
+    New-Object -TypeName PSObject -Property $Properties
 }
 $GroupsWMembers | Export-CSV "DL-Members.csv" -NoTypeInformation
 ```
@@ -59,7 +59,7 @@ $GroupsWMembers | Export-CSV "DL-Members.csv" -NoTypeInformation
 $GroupList = Get-Mailbox -RecipientTypeDetails SharedMailbox -ResultSize:Unlimited
 $GroupsWMembers = @()
 
-ForEach ($Group in $GroupList) {
+$GroupsWMembers = ForEach ($Group in $GroupList) {
     $memberList = ''
     $GroupMembers = Get-MailboxPermission -Identity "$group" | ?{($_.IsInherited -eq $False) -and -not ($_.User -match “NT AUTHORITY”)}
     ForEach($Member in $GroupMembers) {
@@ -69,7 +69,7 @@ ForEach ($Group in $GroupList) {
             $memberList=$Member.User
         }
     }
-    $GroupsWMembers += New-Object -TypeName PSObject -Property @{
+    New-Object -TypeName PSObject -Property @{
         GroupName = $group
         Members = $memberList
     }
@@ -83,7 +83,7 @@ $GroupsWMembers | Export-CSV "Shared-Members.csv" -NoTypeInformation
 $GroupList = Get-UnifiedGroup
 $GroupsWMembers = @()
 
-ForEach ($Group in $GroupList) {
+$GroupsWMembers = ForEach ($Group in $GroupList) {
     $memberList = ''
     $GroupMembers = Get-UnifiedGroupLinks -LinkType Member -Identity "$group"
     ForEach($Member in $GroupMembers) {
@@ -93,7 +93,7 @@ ForEach ($Group in $GroupList) {
             $memberList=$Member.PrimarySmtpAddress
         }
     }
-    $GroupsWMembers += New-Object -TypeName PSObject -Property @{
+    New-Object -TypeName PSObject -Property @{
         GroupName = $group.DisplayName
         Members = $memberList
     }

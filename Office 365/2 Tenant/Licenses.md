@@ -19,7 +19,7 @@ The following script will output a CSV that contains all of the accounts in the 
 ```PowerShell
 $MgUsers = Get-MgUser -All
 $Output =@()
-foreach ($user in $MgUsers) {
+$Output = foreach ($user in $MgUsers) {
     $Properties = [ordered]@{
         "DisplayName" = $User.DisplayName
         "ID" = $user.Id
@@ -27,7 +27,7 @@ foreach ($user in $MgUsers) {
         "Licenses" = (Get-MgUserLicenseDetail -UserId $user.Id).SkuPartNumber -join ";"
 
     }
-    $Output += New-Object -TypeName PSObject -Property $Properties
+    New-Object -TypeName PSObject -Property $Properties
 }
 $Output | export-csv LicensedUsers.csv
 ```

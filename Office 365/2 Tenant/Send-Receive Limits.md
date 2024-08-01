@@ -55,7 +55,7 @@ $AllUsers = Get-Mailbox -ResultSize unlimited
 $UserDetails = @()
 $Counter = 0
 
-ForEach($user in $allusers) {
+$UserDetails = ForEach($user in $allusers) {
     $Counter++
     Write-Progress -Activity 'Processing details' -CurrentOperation $user -PercentComplete (($counter / $allusers.count) * 100)
     $UPN = $User.UserPrincipalName
@@ -69,7 +69,7 @@ ForEach($user in $allusers) {
         ArchiveQuota = $User.ArchiveQuota
         TotalItemSize = Get-MailboxStatistics -Identity "$UPN" | Select TotalItemSize
     }
-    $UserDetails += New-Object -TypeName PSObject -Property $Properties
+    New-Object -TypeName PSObject -Property $Properties
 }
 
 $UserDetails | Export-CSV "Client.csv"

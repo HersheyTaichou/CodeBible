@@ -23,7 +23,7 @@ ForEach ($Share in $Shares) {
     $FolderPath += Get-ChildItem -Directory -Path "$CurFolderPath" -Recurse -Force -EA SilentlyContinue
     $Output = @()
     $CounterB = 0
-    ForEach ($Folder in $FolderPath) {
+    $Output = ForEach ($Folder in $FolderPath) {
         $CounterB++
         Write-Progress -Id 1 -Activity 'Processing Folders' -CurrentOperation $Folder -Status (($CounterB / $FolderPath.count) * 100) -PercentComplete (($CounterB / $FolderPath.count) * 100)
         $ACLPath = $Folder.FullName
@@ -34,7 +34,7 @@ ForEach ($Share in $Shares) {
             Write-Progress -Id 2 -Activity 'Processing Access' -CurrentOperation $FAccessolder -Status (($CounterC / $Acl.Access.count) * 100) -PercentComplete (($CounterC / $Acl.Access.count) * 100)
             if ($Access.IsInherited -eq $False) {
                 $Properties = [ordered]@{'Folder Name'=$Folder.FullName;'Group/User'=$Access.IdentityReference;'Permissions'=$Access.FileSystemRights}
-                $Output += New-Object -TypeName PSObject -Property $Properties
+                New-Object -TypeName PSObject -Property $Properties
             }
         }
     }

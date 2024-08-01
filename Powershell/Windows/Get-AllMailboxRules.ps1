@@ -9,7 +9,7 @@ function Get-AllMailboxRules {
     }
     
     process {
-        foreach ($Mailbox in $AllMailboxes) {
+        $Return = foreach ($Mailbox in $AllMailboxes) {
                 $CounterA ++
                 $ActivityA = "Processing " + $Mailbox.DisplayName
                 Write-Progress -Id 0 -Activity $ActivityA -PercentComplete (($CounterA / $AllMailboxes.count) * 100)
@@ -99,7 +99,7 @@ function Get-AllMailboxRules {
                             'IsValid' = $Rule.IsValid
                             'ObjectState' = $Rule.ObjectState
                         }
-                        $Return += New-Object -TypeName PSObject -Property $Properties
+                        New-Object -TypeName PSObject -Property $Properties
                     }
                 }
             }

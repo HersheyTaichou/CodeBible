@@ -23,7 +23,7 @@ ForEach ($user in $allusers) {
         $FolderPerms = Get-MailboxFolderPermission -Identity $UPNFolder
         if ($null -ne $FolderPerms) {
             $CounterA=0
-            foreach ($entry in $FolderPerms) {
+            $allUserDetails = foreach ($entry in $FolderPerms) {
                 $CounterA++
                 Write-Progress -Id 1 -ParentId 0 -Activity "Processing Folder" -PercentComplete (($CounterA / $FolderPerms.count) * 100)
                 $Properties =  [ordered]@{
@@ -33,7 +33,7 @@ ForEach ($user in $allusers) {
                     'AccesRights'=$entry.accessRights -join ";";
                     'SharingPermissionFlags'=$entry.SharingPermissionFlags
                 }
-                $allUserDetails += New-Object -TypeName PSObject -Property $Properties
+                New-Object -TypeName PSObject -Property $Properties
             }
         }
     }

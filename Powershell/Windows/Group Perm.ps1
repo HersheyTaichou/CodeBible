@@ -71,7 +71,7 @@ function Get-UserPermissions {
             $FolderPath = @(Get-Item -Path $SharePath  | Where-Object {(Get-Acl -Path $_.FullName).Access.IdentityReference -eq $IdentityReference})
             $FolderPath += Get-ChildItem -Directory -Path $SharePath -Recurse -Force | Where-Object {((Get-Acl -Path $_.FullName).Access.IsInherited -eq $false) -and ((Get-Acl -Path $_.FullName).Access.IdentityReference -eq $IdentityReference)}
             $CounterB = 0
-            ForEach ($Folder in $FolderPath) {
+            $Output = ForEach ($Folder in $FolderPath) {
                 $CounterB++
                 $ActivityB = "Processing " + $Folder.Name + " Folder"
                 Write-Progress -Id 1 -Activity $ActivityB -Status (($CounterB / $FolderPath.count) * 100) -PercentComplete (($CounterB / $FolderPath.count) * 100)
@@ -90,7 +90,7 @@ function Get-UserPermissions {
                         'AccessControlType'=$Access.AccessControlType;
                         'InheritanceFlags'=$Access.InheritanceFlags
                     }
-                    $Output += New-Object -TypeName PSObject -Property $Properties
+                    New-Object -TypeName PSObject -Property $Properties
                 }
             }
         }
