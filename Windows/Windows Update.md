@@ -32,6 +32,13 @@ Get-WindowsUpdate -Verbose
 Install-WindowsUpdate -Verbose -AcceptAll
 ```
 
+### Install Specific Updates
+
+```PowerShell
+Install-WindowsUpdate -Verbose -KBArticleID KB4533002
+```
+
+
 ### View Update History
 
 ```PowerShell
