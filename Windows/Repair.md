@@ -50,26 +50,40 @@ Here are the steps to fix it:
 1. Mount an ISO image for the version of Windows on the user's machine.
 2. Create a temporary directory to mount the Windows Image File (WIM).  
 `mkdir C:\WIM`
-3. Mount the WIM file.
+3. Run one of the following two commands to get the index number:
 
-    ```PowerShell
+    Newer versions of Windows:
+
+    ```cmd
+    dism /Get-WimInfo /WimFile:M:\sources\install.wim
+    ```
+
+    Older versions of Windows:
+
+    ```cmd
+    dism /Get-WimInfo /WimFile:M:\sources\install.esd
+    ```
+
+4. Mount the WIM file, substituting the index number for the number determined above
+
+    ```CMD
     Dism /Mount-Wim /WimFile:D:\sources\install.wim /index:1 /MountDir:C:\WIM /ReadOnly
     ```
 
-4. Run Dism with the following parameters.
+5. Run Dism with the following parameters.
 
-    ```PowerShell
+    ```CMD
     Dism /Online /Cleanup-Image /RestoreHealth /Source:C:\WIM\Windows /LimitAccess
     ```
 
-5. When done, unmount the image and delete the folder
+6. When done, unmount the image and delete the folder
 
-    ```PowerShell
+    ```CMD
     Dism /Unmount-Wim /MountDir:C:\WIM /Discard 
     rmdir C:\WIM
     ```
 
-6. It's mandatory to restart your computer, or SFC and DISM will still show errors.
+7. It's mandatory to restart your computer, or SFC and DISM will still show errors.
 
 ## Repair Domain Trust
 
