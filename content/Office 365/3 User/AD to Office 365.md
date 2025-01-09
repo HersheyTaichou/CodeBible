@@ -1,5 +1,7 @@
-# Manually connect an AD User to an Office 365 Mailbox
-
+---
+title: Link an AD User to an Office 365 Mailbox
+description: Manually link or repair a link between an AD user and an Office 365 mailbox
+---
 This is often needed in the following scenarios
 
 - The Office 365 account was previously connected to a different AD account
@@ -7,11 +9,12 @@ This is often needed in the following scenarios
 
 ## Prerequisites
 
-You will need administrative access to a domain controller and you will need to connect to [Microsoft Graph](../1%20Global/Microsoft.Graph.md) with the following scopes
-
-```PowerShell
-Connect-MgGraph -Scopes "User.ReadWrite.All"
-```
+- You will need administrative access to a domain controller
+- You will need to connect to the [[Microsoft.Graph|Microsoft Graph PowerShell Module]] with the following scopes:
+  
+  ```PowerShell
+  Connect-MgGraph -Scopes "User.ReadWrite.All"
+  ```
 
 ## Process
 
