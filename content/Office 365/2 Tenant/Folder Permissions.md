@@ -1,11 +1,13 @@
 ---
 title: Mailbox Folder Permissions Report
 ---
+
 The below script will gather all the recipient accounts, then gather anyone that has access to the Calendar, Contacts, or root folder
 
 ## Prerequisites
 
 Before running this script, you will need to connect with the [[ExchangeOnlineManagement|Exchange Online PowerShell Module]]
+
 ## Script
 
 Copy and paste the whole block into PowerShell, or a ps1 file, then run it.

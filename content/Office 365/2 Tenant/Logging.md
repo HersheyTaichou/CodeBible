@@ -1,6 +1,7 @@
 ---
 title: Search Mailbox Logs
 ---
+
 Commands to search through the audit log and export the results
 
 ## Prerequisites
@@ -20,7 +21,7 @@ $MailboxAuditLog | Export-Csv MailboxAuditLog.csv
 
 Use the following scripts to get all the message trace logs sent from a particular user to a particular user for a specific length of time.
 
-Update the sender and recipient emails. Use *@domain.com to get everything sent to or from a particular domain
+Update the sender and recipient emails. Use \*@domain.com to get everything sent to or from a particular domain
 
 ```PowerShell
 $SenderAddress = "user@domain.com"

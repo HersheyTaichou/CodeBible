@@ -1,8 +1,8 @@
 ---
 title: Microsoft Teams PowerShell Module
 ---
-The #MicrosoftTeams module is used to connect to Teams Online and run commands against Teams or manage user's access
 
+The #MicrosoftTeams module is used to connect to Teams Online and run commands against Teams or manage user's access
 
 ## Prerequisites
 

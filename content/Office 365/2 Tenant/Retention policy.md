@@ -1,6 +1,7 @@
 ---
 title: Retention Policies
 ---
+
 Retention policies govern the rules on what emails are automatically archived and deleted. They also govern what rules the users have access to for automatic archival and deletion
 
 ## Prerequisites
@@ -26,21 +27,23 @@ The PowerShell commands require you to connect with the [[ExchangeOnlineManageme
    1. Click on the policy name that you noted previously
    1. Make a note of all the tags listed under the policy
 1. Check the retention tags settings
+
    1. At the top of the Exchange (legacy) page, switch to the "MRM Retention tags" page
    1. For each tag noted above, check the settings
+
       - **Type:** How the rule is applied
-         - **Personal:** Applied by the user to specific folders
-         - **Default:** Applied to all folders in the mailbox, but can be overridden by a Personal or folder name policy
-         - **"Folder name":** Applied by default to the named folder, but can be overridden by a Personal policy
+        - **Personal:** Applied by the user to specific folders
+        - **Default:** Applied to all folders in the mailbox, but can be overridden by a Personal or folder name policy
+        - **"Folder name":** Applied by default to the named folder, but can be overridden by a Personal policy
       - **Retention Period:** How long before the Retention Action takes effect
       - **Retention Action:** The action to take with the email
       - Three example rules are below:
 
-        | Name | Type | Retention Period | Retention Action | Explanation |
-        |------|:----:|:----------------:|:----------------:|-------------|
-        | 1 Month Delete | Personal | 30 days | Delete | On any folder the user enables this policy on, delete any emails over 30 days |
-        | Default 2 year move to archive | Default | 730 days | Archive | For any email over 2 years old, move the email into the online archive,  if enabled, unless another policy is applied to that folder |
-        | Junk Email | Junk Email | 30 days | Delete | Delete any email in the Junk Email folder that is over 30 days old |
+        | Name                           |    Type    | Retention Period | Retention Action | Explanation                                                                                                                         |
+        | ------------------------------ | :--------: | :--------------: | :--------------: | ----------------------------------------------------------------------------------------------------------------------------------- |
+        | 1 Month Delete                 |  Personal  |     30 days      |      Delete      | On any folder the user enables this policy on, delete any emails over 30 days                                                       |
+        | Default 2 year move to archive |  Default   |     730 days     |     Archive      | For any email over 2 years old, move the email into the online archive, if enabled, unless another policy is applied to that folder |
+        | Junk Email                     | Junk Email |     30 days      |      Delete      | Delete any email in the Junk Email folder that is over 30 days old                                                                  |
 
 ### Creating a new policy
 
@@ -56,7 +59,7 @@ The PowerShell commands require you to connect with the [[ExchangeOnlineManageme
          - **Example:** Automatically to entire mailbox (default)
       1. Set the Retention Period and Action
          - **Example Retention Period:** When items reach the following age (in days)  
-         365
+           365
          - **Example Retention Action:** Move item to archive
    1. Repeat for any other needed retention tags
 1. Create a new Retention policy

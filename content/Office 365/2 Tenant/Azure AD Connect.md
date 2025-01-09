@@ -2,6 +2,7 @@
 title: Microsoft Entra Connect
 description: Entra ID sync utility from Microsoft
 ---
+
 #Microsoft-Entra-Connect is installed on an on-prem server, typically a domain controller, and used to link and sync the on-prem accounts with the Entra ID accounts and mailboxes.
 
 This allows you to use one password for local AD and cloud-hosted accounts.

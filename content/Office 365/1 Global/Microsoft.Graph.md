@@ -1,6 +1,7 @@
 ---
 title: Microsoft Graph PowerShell Module
 ---
+
 #Microsoft_Graph is used to connect to Entra ID (formerly Azure AD), then run commands against objects such as Users or Groups
 
 ## Prerequisites
@@ -18,7 +19,7 @@ Install-Module -Name Microsoft.Graph
 Occasionally, Microsoft will update the module, in that case, you can use the following command to update to the latest version of the module
 
 ```PowerShell
-Update-Module -Name Microsoft.Graph 
+Update-Module -Name Microsoft.Graph
 ```
 
 ### Import

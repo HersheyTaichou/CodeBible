@@ -2,7 +2,6 @@
 title: Working with Send/Receive Limits in Exchange Online
 ---
 
-
 This article includes commands to get or change the default send/receive limits in Exchange Online
 
 ## Prerequisites

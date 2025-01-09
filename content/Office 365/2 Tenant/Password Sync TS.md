@@ -1,6 +1,7 @@
 ---
 title: Troubleshoot AD Password Sync
 ---
+
 Occasionally, the Office 365 portal will report that there is an issue with the password sync from the on-prem AD server.
 
 ## Prerequisites

@@ -1,19 +1,20 @@
 ---
 title: Groups in Exchange Online
 ---
+
 The following are scripts for working with groups in Microsoft Online.
 
 For a table like the following, use the (One File) scripts
 
-| Group name       | Members                            |
-|------------------|------------------------------------|
+| Group name          | Members                                |
+| ------------------- | -------------------------------------- |
 | <group1@domain.com> | <user1@domain.com>; <user2@domain.com> |
 | <group2@domain.com> | <user1@domain.com>; <user3@domain.com> |
 
 For one file per group, with just the members of that group, use the (Per Group) scripts
 
 | Members            |
-|--------------------|
+| ------------------ |
 | <user1@domain.com> |
 | <user1@domain.com> |
 

@@ -2,6 +2,7 @@
 title: Microsoft Entra Connect Custom Sync Rules
 description: How to add custom sync rules in Microsoft Entra Connect
 ---
+
 This document covers how to create custom sync rules for #Microsoft-Entra-Connect. This can be useful to sync specific fields from Active Directory to Entra ID
 
 ## Prerequisites
@@ -32,9 +33,9 @@ This is useful when you want to create dynamic distribution groups based on a us
       - **Source**: Department
       - Leave the other settings as-is
 1. Open PowerShell as an admin
-1. Run  an initial Sync
+1. Run an initial Sync
 
-   ```PowerShell 
+   ```PowerShell
    Start-ADSyncSyncCycle -PolicyType Initial
    ```
 

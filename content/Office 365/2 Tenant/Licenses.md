@@ -1,6 +1,7 @@
 ---
 title: Working with Licenses
 ---
+
 Various commands and scripts for working with Licenses in Office 365 through Microsoft Graph
 
 ## Prerequisites

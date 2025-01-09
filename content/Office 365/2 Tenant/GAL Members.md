@@ -2,6 +2,7 @@
 title: GAL Membership Lists
 description: Get all members of the GAL
 ---
+
 Use this to get a CSV with all the emails in Exchange Online, including if they are in the GAL or not.
 
 ## Prerequisites
@@ -26,7 +27,7 @@ foreach($recipient in $EXORecipient){
                     "RecipientTypeDetails" = $recipient.RecipientTypeDetails
                 }
 
-                
+
                 ##Convert hashtable to PSCustomObject
                 $obj = New-Object -TypeName psobject -Property $hash
 

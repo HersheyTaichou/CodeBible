@@ -1,6 +1,7 @@
 ---
 title: Organization Relationships
 ---
+
 This is the process to set up an organizational relationship, which is primarily used to share some calendar details between two different organizations.
 
 ## Prerequisites
@@ -27,10 +28,10 @@ Before starting, it is recommended that you create a mail-enabled security group
 
 ### Troubleshoot an Organizational Relationship
 
-In a perfect world the other organization will create the reciprocated organizational relationship and then end users can happily share calendar information.  Often found this is rarely the case so here are some troubleshooting steps which might make life a little easier:
+In a perfect world the other organization will create the reciprocated organizational relationship and then end users can happily share calendar information. Often found this is rarely the case so here are some troubleshooting steps which might make life a little easier:
 
 First, let’s validate the federation information. This is done in PowerShell using Exchange Online.  
-When connected to O365/PS you can view the federation information of any O365 tenant.  You don’t need to be given any explicit access to do this.  The following command is used:
+When connected to O365/PS you can view the federation information of any O365 tenant. You don’t need to be given any explicit access to do this. The following command is used:
 
 ```PowerShell
 Get-FederationInformation -DomainName domain.com -BypassAdditionalDomainValidation
@@ -137,10 +138,10 @@ COMPLETE.
 
 ### Extended Troubleshooting
 
-Now is probably an appropriate time to find out if the other tenant has a hybrid environment and if it is set up correctly. The best way to validate is if the online and on-prem can share calendar information.  If this is the case then the additional domain of domain.mail.onmicrosoft.com may also need to be included in the list of domains for the org relationship.  But this should also come up when viewing the federated info.
+Now is probably an appropriate time to find out if the other tenant has a hybrid environment and if it is set up correctly. The best way to validate is if the online and on-prem can share calendar information. If this is the case then the additional domain of domain.mail.onmicrosoft.com may also need to be included in the list of domains for the org relationship. But this should also come up when viewing the federated info.
 If this is not the case then it is down to a permissions issue.
 
-When using the scheduler in Outlook, unless specified, the account that is being used is the default user.  The permissions for the default user cannot be set to "none".
+When using the scheduler in Outlook, unless specified, the account that is being used is the default user. The permissions for the default user cannot be set to "none".
 
 Permissions that only apply to calendars are:
 
@@ -160,7 +161,7 @@ $users = Get-Mailbox -Resultsize Unlimited
 foreach ($user in $users) { Set-MailboxFolderPermission -Identity "$($user.alias):\calendar" -User Default -AccessRights AvailabilityOnly }
 ```
 
-This will traverse each mailbox and make permission changes where needed and throw a warning (per mailbox) if no changes get made.  This also applies to rooms etc.
+This will traverse each mailbox and make permission changes where needed and throw a warning (per mailbox) if no changes get made. This also applies to rooms etc.
 
 Calendar sharing should now be functional.
 
