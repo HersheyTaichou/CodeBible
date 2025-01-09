@@ -21,7 +21,7 @@ jobs:
           echo "OWNER_LOWERCASE=${OWNER,,}" >> ${GITHUB_ENV}
         env:
           OWNER: "${{ github.repository_owner }}"
-      - uses: actions/checkout@19-migrate-to-quartz
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 1
       - name: Inject slug/short variables
