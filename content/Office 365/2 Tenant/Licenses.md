@@ -1,10 +1,11 @@
-# Working with Licenses
-
+---
+title: Working with Licenses
+---
 Various commands and scripts for working with Licenses in Office 365 through Microsoft Graph
 
 ## Prerequisites
 
-Before running any of these commands, you will need to connect to [Microsoft Graph](../1%20Global/Microsoft.Graph.md) with the following scopes
+Before running any of these commands, you will need to connect with the [[Microsoft.Graph|Microsoft Graph PowerShell Module]] with the following scopes:
 
 ```PowerShell
 Connect-MgGraph -Scopes "User.Read.All"

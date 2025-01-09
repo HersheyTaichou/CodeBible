@@ -1,5 +1,6 @@
-# Public Folders in Exchange Online
-
+---
+title: Public Folders in Exchange Online
+---
 The following are scripts that can be useful when working with public folders in Exchange Online
 
 ## Prerequisites

@@ -1,8 +1,11 @@
-# Search Mailbox Logs
-
+---
+title: Search Mailbox Logs
+---
 Commands to search through the audit log and export the results
 
 ## Prerequisites
+
+Before running these scripts, you will need to connect with the [[ExchangeOnlineManagement|Exchange Online PowerShell Module]]
 
 ## Commands/Scripts
 

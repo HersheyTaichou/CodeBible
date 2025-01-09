@@ -1,5 +1,6 @@
-# Groups in Exchange Online
-
+---
+title: Groups in Exchange Online
+---
 The following are scripts for working with groups in Microsoft Online.
 
 For a table like the following, use the (One File) scripts
@@ -18,7 +19,7 @@ For one file per group, with just the members of that group, use the (Per Group)
 
 ## Prerequisites
 
-Before running these scripts, you will need to connect to [Exchange Online](../1%20Global/ExchangeOnlineManagement.md)
+Before running these scripts, you will need to connect to the [[ExchangeOnlineManagement|Exchange Online PowerShell Module]]
 
 ## Scripts
 

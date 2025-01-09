@@ -1,10 +1,13 @@
-# Working with Send/Receive Limits in Exchange Online
+---
+title: Working with Send/Receive Limits in Exchange Online
+---
+
 
 This article includes commands to get or change the default send/receive limits in Exchange Online
 
 ## Prerequisites
 
-Before running these scripts, you will need to connect to [Exchange Online](../1%20Global/ExchangeOnlineManagement.md)
+Before running these scripts, you will need to connect with the [[ExchangeOnlineManagement|Exchange Online PowerShell Module]]
 
 ## Commands
 

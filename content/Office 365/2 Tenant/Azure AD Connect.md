@@ -1,6 +1,8 @@
-# Azure AD Connect
-
-This utility is installed on an on-prem server, typically a domain controller, and used to link and sync the on-prem accounts with the Entra ID accounts and mailboxes.
+---
+title: Microsoft Entra Connect
+description: Entra ID sync utility from Microsoft
+---
+#Microsoft-Entra-Connect is installed on an on-prem server, typically a domain controller, and used to link and sync the on-prem accounts with the Entra ID accounts and mailboxes.
 
 This allows you to use one password for local AD and cloud-hosted accounts.
 
@@ -10,7 +12,7 @@ This allows you to use one password for local AD and cloud-hosted accounts.
 
 This typically only needs to be installed on one server in an environment. Microsoft has a series of very in-depth articles on how to install it available that can be found at the below link
 
-[Azure AD Connect and Azure AD Connect Health installation roadmap](https://learn.microsoft.com/en-us/azure/active-directory/hybrid/connect/how-to-connect-install-roadmap)
+[# Microsoft Entra Connect and Microsoft Entra Connect Health installation roadmap](https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/how-to-connect-install-roadmap)
 
 ### Import
 

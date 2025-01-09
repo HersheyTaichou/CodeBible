@@ -1,8 +1,10 @@
-# Search for Details in Exchange Online
-
+---
+title: Searches in Exchange Online
+---
+How to search for specific details in Exchange Online
 ## Prerequisites
 
-Before running these scripts, you will need to connect to [Exchange Online](../1%20Global/ExchangeOnlineManagement.md)
+Before running these scripts, you will need to connect with the [[ExchangeOnlineManagement|Exchange Online PowerShell Module]]
 
 ## Commands
 

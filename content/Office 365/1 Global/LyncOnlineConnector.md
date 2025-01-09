@@ -1,7 +1,7 @@
 ---
 title: Skype for Business Online PowerShell Module
 ---
->[!Deprecated] This module has been superseeded by the MicrosoftTeams module.
+>[!Deprecated] This module has been superseeded by the #MicrosoftTeams module.
 
 This module is used to connect to Skype for Business Online and manage it through PowerShell.
 

@@ -1,10 +1,13 @@
-# Retention Policies
-
+---
+title: Retention Policies
+---
 Retention policies govern the rules on what emails are automatically archived and deleted. They also govern what rules the users have access to for automatic archival and deletion
 
 ## Prerequisites
 
 You will need access to the company's Office 365 Tenant with an account that has the requisite permissions to make changes in the Exchange Admin Center and the Compliance Center.
+
+The PowerShell commands require you to connect with the [[ExchangeOnlineManagement|Exchange Online PowerShell Module]]
 
 ## Processes
 

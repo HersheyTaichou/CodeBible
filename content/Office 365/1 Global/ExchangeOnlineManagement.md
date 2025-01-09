@@ -1,7 +1,7 @@
 ---
 title: Exchange Online PowerShell Module
 ---
-The ExchangeOnlineManagement module is used to connect to Exchange Online and run commands against objects in Exchange (Users, Groups, etc.)
+The #ExchangeOnlineManagement module is used to connect to Exchange Online and run commands against objects in Exchange (Users, Groups, etc.)
 
 ## Prerequisites
 

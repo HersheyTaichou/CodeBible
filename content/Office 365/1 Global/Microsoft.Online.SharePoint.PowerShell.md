@@ -1,7 +1,7 @@
 ---
 title: SharePoint Online PowerShell Module
 ---
-The Microsoft.Online.SharePoint.PowerShell module is used to connect to SharePoint Online and then run commands against objects in SharePoint
+The #Microsoft_Online_SharePoint_PowerShell module is used to connect to SharePoint Online and then run commands against objects in SharePoint
 
 ## Prerequisites
 

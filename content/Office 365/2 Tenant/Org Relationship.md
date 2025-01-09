@@ -1,10 +1,11 @@
-# Organization Relationships
-
+---
+title: Organization Relationships
+---
 This is the process to set up an organizational relationship, which is primarily used to share some calendar details between two different organizations.
 
 ## Prerequisites
 
-You will need access to one or both of the company's Office 365 Tenants with an account that has the requisite permissions to make changes in the Exchange Admin Center. To troubleshoot, you will need to log in to [Exchange Online](../1%20Global/ExchangeOnlineManagement.md) in PowerShell
+You will need access to one or both of the company's Office 365 Tenants with an account that has the requisite permissions to make changes in the Exchange Admin Center. To troubleshoot, you will need to connect with the [[ExchangeOnlineManagement|Exchange Online PowerShell Module]]
 
 ## Process
 

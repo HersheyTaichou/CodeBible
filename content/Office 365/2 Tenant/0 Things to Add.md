@@ -1,4 +1,8 @@
-# Sites with things to add
+---
+title: Z - Possible Additions
+description: Things that might be useful to add as articles
+---
+Things that might be useful to add as articles at some point:
 
 [Enhance Exchange Email Monitoring Using PowerShell](https://m365scripts.com/exchange-online/enhance-exchange-email-monitoring-using-powershell/)
 

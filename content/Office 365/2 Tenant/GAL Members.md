@@ -1,10 +1,12 @@
-# GAL Membership List
-
+---
+title: GAL Membership Lists
+description: Get all members of the GAL
+---
 Use this to get a CSV with all the emails in Exchange Online, including if they are in the GAL or not.
 
 ## Prerequisites
 
-Before running this script, you will need to connect to [Exchange Online](../1%20Global/ExchangeOnlineManagement.md)
+Before running this script, you will need to connect to the [[ExchangeOnlineManagement|Exchange Online PowerShell Module]]
 
 ## Script
 

@@ -1,5 +1,7 @@
-# Software Name
-
+---
+title: Software Name
+description: One-liner about the software
+---
 Provide a brief overview of the software, what it is, and what it does.
 
 > A quote about the software  

@@ -1,10 +1,12 @@
-# Get All Forwards and Rules
-
+---
+title: Find Mailbox Forwards
+description: Find email forwards either through rules or a setting on the mailbox.
+---
 The following scripts will generate reports on any forward in place on a mailbox or setup via a rule in the mailbox.
 
 ## Prerequisites
 
-Before running either of these scripts, you will need to connect to [Exchange Online](../1%20Global/ExchangeOnlineManagement.md)
+Before running either of these scripts, you will need to connect to the [[ExchangeOnlineManagement|Exchange Online PowerShell Module]]
 
 ## Commands
 
@@ -16,7 +18,7 @@ Get-Mailbox -ResultSize unlimited | Select UserPrincipalName,ForwardingSmtpAddre
 
 ### Get All Rules to Forward Emails Externally
 
-> This was added as a function to the [CodeBible module](../../PowerShell/Modules/CodeBible/README.md) and can be run with `Get-ForwardRules -OnlyExternal`
+> This was added as a function to the [CodeBible module](https://github.com/HersheyTaichou/CodeBible-Module) and can be run with `Get-ForwardRules -OnlyExternal`
 
 ```PowerShell
 $domains = Get-AcceptedDomain

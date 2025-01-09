@@ -1,9 +1,9 @@
 ---
 title: AzureAD PowerShell Module
 ---
->[!Deprecated] The AzureAD module is planned for  deprecation and is is superseded by Microsoft Graph.
+>[!Deprecated] The #AzureAD module is planned for  deprecation and is is superseded by #Microsoft_Graph.
 
-The AzureAD module is used to connect to Entra ID (formerly Azure AD) and run commands against objects in Entra ID (Users, Groups, etc).
+The #AzureAD module is used to connect to Entra ID (formerly Azure AD) and run commands against objects in Entra ID (Users, Groups, etc).
 
 >[!Powershell5] The AzureAD module only works in Windows PowerShell, and will generate errors if you try to use it in PowerShell Core
 

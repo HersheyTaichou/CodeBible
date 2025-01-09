@@ -1,7 +1,7 @@
 ---
 title: Microsoft Graph PowerShell Module
 ---
-Azure Graph is used to connect to Microsoft Azure AD, or Entra ID, then run commands against objects in Azure AD (Users, Groups, etc.)
+#Microsoft_Graph is used to connect to Entra ID (formerly Azure AD), then run commands against objects such as Users or Groups
 
 ## Prerequisites
 
