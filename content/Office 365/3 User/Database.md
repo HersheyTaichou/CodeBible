@@ -1,10 +1,12 @@
-# Migrate a mailbox to another database server
+---
+title: Migrate a mailbox to another database server
+---
 
 This command can be useful when a mailbox is behaving oddly. It will migrate the mailbox to another server on Microsoft's end and appears to repair it at the same time, which can fix odd issues.
 
 ## Prerequisites
 
-Before running these commands, you will need to connect to [Exchange Online](../1%20Global/ExchangeOnlineManagement.md)
+Before running these commands, you will need to connect with the [[ExchangeOnlineManagement|Exchange Online PowerShell Module]]
 
 ## Commands
 
