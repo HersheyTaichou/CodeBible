@@ -11,7 +11,7 @@ on:
 
 jobs:
   build-and-test:
-    if: ${{ github.repository == 'jackyzha0/quartz' }}
+    if: ${{ github.repository == 'HersheyTaichou/CodeBible' }}
     strategy:
       matrix:
         os: [windows-latest, macos-latest, ubuntu-latest]
@@ -48,7 +48,7 @@ jobs:
         run: npx quartz build --bundleInfo
 
   publish-tag:
-    if: ${{ github.repository == 'jackyzha0/quartz' && github.ref == 'refs/heads/19-migrate-to-quartz' }}
+    if: ${{ github.repository == 'HersheyTaichou/CodeBible' && github.ref == 'refs/heads/19-migrate-to-quartz' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
