@@ -2,10 +2,10 @@ name: Docker build & push image
 
 on:
   push:
-    branches: [v4]
+    branches: [19-migrate-to-quartz]
     tags: ["v*"]
   pull_request:
-    branches: [v4]
+    branches: [19-migrate-to-quartz]
     paths:
       - .github/workflows/docker-build-push.yaml
       - quartz/**
@@ -21,7 +21,7 @@ jobs:
           echo "OWNER_LOWERCASE=${OWNER,,}" >> ${GITHUB_ENV}
         env:
           OWNER: "${{ github.repository_owner }}"
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@19-migrate-to-quartz
         with:
           fetch-depth: 1
       - name: Inject slug/short variables
