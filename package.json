@@ -6,10 +6,10 @@
   "type": "module",
   "author": "jackyzha0 <j.zhao2k19@gmail.com>",
   "license": "MIT",
-  "homepage": "https://docs.oriontech.info/",
+  "homepage": "https://quartz.jzhao.xyz",
   "repository": {
     "type": "git",
-    "url": "https://github.com/HersheyTaichou/CodeBible.git"
+    "url": "https://github.com/jackyzha0/quartz.git"
   },
   "scripts": {
     "quartz": "./quartz/bootstrap-cli.mjs",
