@@ -6,7 +6,7 @@ How to search for specific details in Exchange Online
 
 ## Prerequisites
 
-Before running these scripts, you will need to connect with the [[ExchangeOnlineManagement|Exchange Online PowerShell Module]]
+These commands require the #ExchangeOnlineManagement module.
 
 ## Commands
 

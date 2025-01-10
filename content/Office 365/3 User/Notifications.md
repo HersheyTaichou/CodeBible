@@ -7,7 +7,7 @@ title: Disable Events from Email
 
 ## Prerequisites
 
-Before running these commands, you will need to connect with the [[ExchangeOnlineManagement|Exchange Online PowerShell Module]]
+These commands require the #ExchangeOnlineManagement module.
 
 ## Commands
 

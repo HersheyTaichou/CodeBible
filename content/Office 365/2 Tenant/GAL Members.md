@@ -7,7 +7,7 @@ Use this to get a CSV with all the emails in Exchange Online, including if they 
 
 ## Prerequisites
 
-Before running this script, you will need to connect to the [[ExchangeOnlineManagement|Exchange Online PowerShell Module]]
+These commands require the #ExchangeOnlineManagement module.
 
 ## Script
 

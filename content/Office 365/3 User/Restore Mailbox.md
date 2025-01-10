@@ -6,7 +6,7 @@ In the case when an account was deleted and the mailbox was orphaned, you can cr
 
 ## Prerequisites
 
-Before running these commands, you will need administrative access to the Exchange on-prem server or you will need to connect to [Exchange Online](../1%20Global/ExchangeOnlineManagement.md)
+These commands require the #ExchangeOnlineManagement module.
 
 ## Commands
 

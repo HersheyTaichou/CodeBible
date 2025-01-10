@@ -8,7 +8,7 @@ For the folder permission commands, they work for any folder in the mailbox, all
 
 ## Prerequisites
 
-Before running these commands, you will need to connect to [Exchange Online](../1%20Global/ExchangeOnlineManagement.md)
+These commands require the #ExchangeOnlineManagement module.
 
 ## Commands
 

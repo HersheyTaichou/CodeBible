@@ -6,7 +6,7 @@ The following are scripts that can be useful when working with public folders in
 
 ## Prerequisites
 
-Before running these scripts, you will need to connect to [Exchange Online](../1%20Global/ExchangeOnlineManagement.md)
+These scripts require the #ExchangeOnlineManagement module.
 
 ## Scripts
 

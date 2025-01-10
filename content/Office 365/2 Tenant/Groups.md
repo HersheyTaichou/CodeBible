@@ -20,7 +20,7 @@ For one file per group, with just the members of that group, use the (Per Group)
 
 ## Prerequisites
 
-Before running these scripts, you will need to connect to the [[ExchangeOnlineManagement|Exchange Online PowerShell Module]]
+These commands require the #ExchangeOnlineManagement module.
 
 ## Scripts
 

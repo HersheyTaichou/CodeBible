@@ -6,7 +6,7 @@ This article includes commands to get or change the default send/receive limits 
 
 ## Prerequisites
 
-Before running these scripts, you will need to connect with the [[ExchangeOnlineManagement|Exchange Online PowerShell Module]]
+These scripts require the #ExchangeOnlineManagement module.
 
 ## Commands
 

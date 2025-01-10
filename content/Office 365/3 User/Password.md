@@ -6,11 +6,7 @@ This article includes commands for managing password expiration policies in Entr
 
 ## Prerequisites
 
-Before running these commands, you will need to connect to the [[Microsoft.Graph|Microsoft Graph PowerShell Module]] with the following scopes:
-
-```PowerShell
-Connect-MgGraph -Scopes "User.ReadWrite.All","Group.ReadWrite.All"
-```
+These commands require the #Microsoft_Graph module with the `User.ReadWrite.All` and `Group.ReadWrite.All` scopes.
 
 ## Commands
 

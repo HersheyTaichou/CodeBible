@@ -7,7 +7,7 @@ Below you will find various commands useful for managing email in bulk.
 
 ## Prerequisites
 
-Before running any of these commands, you will need to connect with the [[ExchangeOnlineManagement|Exchange Online PowerShell Module]]
+These commands require the #ExchangeOnlineManagement module.
 
 ## Commands
 

@@ -6,7 +6,7 @@ This command can be useful when a mailbox is behaving oddly. It will migrate the
 
 ## Prerequisites
 
-Before running these commands, you will need to connect with the [[ExchangeOnlineManagement|Exchange Online PowerShell Module]]
+These commands require the #ExchangeOnlineManagement module.
 
 ## Commands
 

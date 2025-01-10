@@ -6,7 +6,7 @@ The below script will gather all the recipient accounts, then gather anyone that
 
 ## Prerequisites
 
-Before running this script, you will need to connect with the [[ExchangeOnlineManagement|Exchange Online PowerShell Module]]
+This script makes use of the #ExchangeOnlineManagement module.
 
 ## Script
 
