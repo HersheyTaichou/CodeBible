@@ -11,9 +11,10 @@ Before running this script, you will need to connect with the [[ExchangeOnlineMa
 
 You will need to connect to the [[Microsoft.Graph|Microsoft Graph PowerShell Module]] with the following scopes:
 
-  ```PowerShell
-  Connect-MgGraph -Scopes "User.ReadWrite.All"
-  ```
+```PowerShell
+Connect-MgGraph -Scopes "User.ReadWrite.All"
+```
+
 ## Command(s)/Script(s)/Process
 
 ## More Information
