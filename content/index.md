@@ -10,25 +10,13 @@ It also includes a lot of things I've documented while setting up my home lab en
 
 ## Getting Started
 
-This has been setup as a Quartz site, which can be viewed at [docs.oriontech.info](https://docs.oriontech.info). You can view the original Markdown files in the original Github repository, [here](https://github.com/HersheyTaichou/CodeBible)
-
-### Visual Studio Code
-
-[Visual Studio Code](https://code.visualstudio.com/) can be downloaded from Microsoft for free. The installation is fairly straightforward, and it includes git capabilities built-in.
-
-While the VSCode installation is running, you can log into GitHub and fork this repository, if you want a personal copy to make changes to.
-
-Once you have VSCode installed, you want to go to the Source Control tab on the left and click on the option to Clone a repository.
-
-At the top, it will give you the option to paste a URL or log in to GitHub. You can paste the link from the Code dropdown at the top, or log in to your account and sync your copy of the repo
-
-Finally, it will ask you where you want to want to store the local copy of your repository.
+This has been setup as a Quartz site, which can be viewed at [docs.oriontech.info](https://docs.oriontech.info). You can view the original Markdown files in the original Github repository, [here](https://github.com/HersheyTaichou/CodeBible). 
 
 ## CodeBible PowerShell Module
 
 Work has begun on migrating some of the scripts to PowerShell functions, which will be included in a module, so the script can be run with one command. The module can be found [here](https://github.com/HersheyTaichou/CodeBible-Module)
 
-The original scripts will remain as-is, for reference or for when you need to run them on a machine but do not want to download and import the module. Migrated functions will have a note before the script, to inform you that it is part of the module.
+The original scripts will remain, for reference or for when you need to run them on a machine but do not want to download and import the module. Migrated functions will have a note before the script, to inform you that it is part of the module.
 
 ## Other Resources
 
@@ -42,7 +30,7 @@ Sean's blog has various articles on PowerShell scripts that work with Microsoft'
 
 ## Contribute
 
-I am always open to suggestions of things that you have found helpful, or ways I can improve the documentation on the scripts and how-to's present in this repository.
+I am always open to suggestions of things that you have found helpful, or ways I can improve the documentation on the scripts and notes present in this repository.
 
 Please use the issues tab at the top of the repository on GitHub to suggest any improvements or problems found.
 

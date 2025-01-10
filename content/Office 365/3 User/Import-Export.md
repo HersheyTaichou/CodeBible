@@ -1,4 +1,7 @@
-# Bulk Import, Export, or Delete Emails
+---
+title: Manage Emails in Bulk
+description: Bulk Import, Export, or Delete Emails
+---
 
 ## Prerequisites
 

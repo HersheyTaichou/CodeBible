@@ -7,10 +7,13 @@ A brief overview of what this article covers
 
 ## Prerequisites
 
-Before running these commands, you will need to connect to [Exchange Online](../1%20Global/ExchangeOnlineManagement.md)
+Before running this script, you will need to connect with the [[ExchangeOnlineManagement|Exchange Online PowerShell Module]]
 
-Before running these commands, you will need to connect to [Microsoft Graph](../1%20Global/Microsoft.Graph.md) with the following scopes
+You will need to connect to the [[Microsoft.Graph|Microsoft Graph PowerShell Module]] with the following scopes:
 
+  ```PowerShell
+  Connect-MgGraph -Scopes "User.ReadWrite.All"
+  ```
 ## Command(s)/Script(s)/Process
 
 ## More Information
