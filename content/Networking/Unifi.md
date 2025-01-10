@@ -1,6 +1,7 @@
 ---
 title: Unifi Network
 ---
+
 ## UniFi Network 7.5 and Newer
 
 - UniFi Network Application 7.5 and newer requires MongoDB 3.6 and Java 17.

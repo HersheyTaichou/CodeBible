@@ -1,4 +1,9 @@
-# Azure and Exchange Online User Termination Commands
+---
+title: Azure and Exchange Online User Termination Commands
+description: Commands useful when off-boarding a user
+---
+
+Commands useful when off-boarding a user
 
 ## Prerequisites
 

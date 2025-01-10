@@ -1,8 +1,12 @@
-# Password Expiration Policies
+---
+title: Password Expiration Policies
+---
+
+This article includes commands for managing password expiration policies in Entra ID
 
 ## Prerequisites
 
-Before running these commands, you will need to log in to [Microsoft Graph](../1%20Global/Microsoft.Graph.md) with the following scopes:
+Before running these commands, you will need to connect to the [[Microsoft.Graph|Microsoft Graph PowerShell Module]] with the following scopes:
 
 ```PowerShell
 Connect-MgGraph -Scopes "User.ReadWrite.All","Group.ReadWrite.All"

@@ -1,4 +1,6 @@
-# Access to a User's Mailbox/Folders
+---
+title: Access to a User's Mailbox/Folders
+---
 
 The following commands will allow you to give another user access to a mailbox or a folder in that mailbox, for delegate or monitoring purposes.
 
