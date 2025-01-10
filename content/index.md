@@ -10,7 +10,7 @@ It also includes a lot of things I've documented while setting up my home lab en
 
 ## Getting Started
 
-This has been setup as a Quartz site, which can be viewed at [hersheytaichou.github.io/CodeBible](https://hersheytaichou.github.io/CodeBible). You can view the original Markdown files in the original Github repository, [here](https://github.com/HersheyTaichou/CodeBible)
+This has been setup as a Quartz site, which can be viewed at [docs.oriontech.info](https://docs.oriontech.info). You can view the original Markdown files in the original Github repository, [here](https://github.com/HersheyTaichou/CodeBible)
 
 ### Visual Studio Code
 

@@ -1,4 +1,7 @@
-# Get Details about Guest Users
+---
+title: Manage Entra ID Guest Accounts
+description: Tips on managing guest accounts in Entra ID
+---
 
 This article goes over how to gather details on guest users in Entra ID
 
@@ -24,6 +27,17 @@ This command will export a report with the above details
 
 ```powershell
 $GuestUsers | Select-Object Mail,UserPrincipalName,DisplayName,Id,@{N='LastSignInDate';E={$_.SignInActivity.LastSignInDateTime}},CreatedDateTime | Export-Csv "$env:TEMP\GuestUsers.csv"
+```
+
+### Guest User Cleanup
+
+> [!module] A script has been added to the Code Bible Module to find and remove any guest users have have not signed in for a specified number of days. The module can be found [here](https://github.com/HersheyTaichou/CodeBible-Module)
+
+```PowerShell
+$Guests = Get-MgBetaUser -all -Select SignInActivity | Where-Object {$_.UserType -eq "Guest"}
+$Age = Read-Host -Prompt "Enter a negative number of days, any guest accounts that have not signed in for that number of days will be disabled:"
+$RemoveGuests = $Guests | Where-Object {$_.CreatedDateTime -le (Get-Date).AddDays($Age) -and $_.SignInActivity.LastSuccessfulSignInDateTime -le (Get-Date).AddDays($Age)}
+$RemoveGuests | ForEach-Object {Update-MgUser -UserId $_.Id -AccountEnabled $false}
 ```
 
 ## More Information
