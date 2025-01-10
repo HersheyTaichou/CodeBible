@@ -1,6 +1,31 @@
-# Unifi Network
+---
+title: Unifi Network
+---
+## UniFi Network 7.5 and Newer
 
-By default, the Unifi Network application is restricted to Mongo BD version 3.6 and below. As version 3.6 is EOL, this can be a security risk.
+- UniFi Network Application 7.5 and newer requires MongoDB 3.6 and Java 17.
+- Version 7.5 to 8.0 supports up to MongoDB 4.4.
+- Version 8.1 and newer supports up to MongoDB 7.0.
+- Version 9.0 and newer supports up to MongoDB 8.0 and Java 17/21.
+
+When doing a fresh install, you can go straight to the newest version of MongoDB supported by that version of Unifi network.
+
+If you are doing an upgrade, you will need to follow the process documented in the MongoDB release notes to step up the database to the latest version.
+
+> [!UpgradePath] 3.6 --> 4.0 --> 4.2 --> 4.4 --> 5.0 --> 6.0 --> 7.0
+
+- [Upgrade 3.6 to 4.0](https://www.mongodb.com/docs/legacy/) - This is only available as a download archive
+- [Upgrade 4.0 to 4.2](https://www.mongodb.com/docs/v4.4/release-notes/4.2-upgrade-standalone/)
+- [Upgrade 4.2 to 4.4](https://www.mongodb.com/docs/v4.4/release-notes/4.4-upgrade-standalone/)
+- [Upgrade 4.4 to 5.0](https://www.mongodb.com/docs/manual/release-notes/5.0-upgrade-standalone/)
+- [Upgrade 5.0 to 6.0](https://www.mongodb.com/docs/manual/release-notes/6.0-upgrade-standalone/)
+- [Upgrade 6.0 to 7.0](https://www.mongodb.com/docs/manual/release-notes/7.0-upgrade-standalone/)
+
+Source: [Upgrade path for MongoDB now that UniFi 8.1.113 supports MongoDB up to 7.0 (don't blindly jump major MongoDB versions) : r/Ubiquiti](https://www.reddit.com/r/Ubiquiti/comments/1bjlbmf/upgrade_path_for_mongodb_now_that_unifi_81113/)
+
+## UniFi Network v7.4 or Prior
+
+By default, the Unifi Network application is restricted to MongoDB version 3.6 and below. As version 3.6 is EOL, this can be a security risk.
 
 The solution is to install a newer version of Mongo DB, then manually install Unifi and bypass the max version restriction.
 
