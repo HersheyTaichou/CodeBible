@@ -7,7 +7,7 @@ Some of the longer scripts have been converted into proper PowerShell functions 
 
 ## Prerequisites
 
-Some of the modules require other modules as dependencies, for example, [ExoMailbox.psd1]([CodeBible-Module/ExoMailbox/Source/ExoMailbox.psd1 at main · HersheyTaichou/CodeBible-Module](https://github.com/HersheyTaichou/CodeBible-Module/blob/main/ExoMailbox/Source/ExoMailbox.psd1)) requires [[ExchangeOnlineManagement]]
+Some of the modules require other modules as dependencies, for example, [ExoMailbox.psd1](https://github.com/HersheyTaichou/CodeBible-Module/blob/main/ExoMailbox/Source/ExoMailbox.psd1) requires [[ExchangeOnlineManagement]]
 
 ## How to Install
 
