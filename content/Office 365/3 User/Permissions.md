@@ -1,4 +1,6 @@
-# Access to a User's Mailbox/Folders
+---
+title: Access to a User's Mailbox/Folders
+---
 
 The following commands will allow you to give another user access to a mailbox or a folder in that mailbox, for delegate or monitoring purposes.
 
@@ -6,7 +8,7 @@ For the folder permission commands, they work for any folder in the mailbox, all
 
 ## Prerequisites
 
-Before running these commands, you will need to connect to [Exchange Online](../1%20Global/ExchangeOnlineManagement.md)
+These commands require the #ExchangeOnlineManagement module.
 
 ## Commands
 

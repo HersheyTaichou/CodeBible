@@ -3,9 +3,11 @@ title: Manage Emails in Bulk
 description: Bulk Import, Export, or Delete Emails
 ---
 
+Below you will find various commands useful for managing email in bulk.
+
 ## Prerequisites
 
-Before running any of these commands, you will need to connect to [Exchange Online](../1%20Global/ExchangeOnlineManagement.md)
+These commands require the #ExchangeOnlineManagement module.
 
 ## Commands
 

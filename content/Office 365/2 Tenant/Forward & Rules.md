@@ -7,7 +7,7 @@ The following scripts will generate reports on any forward in place on a mailbox
 
 ## Prerequisites
 
-Before running either of these scripts, you will need to connect to the [[ExchangeOnlineManagement|Exchange Online PowerShell Module]]
+These commands require the #ExchangeOnlineManagement module.
 
 ## Commands
 

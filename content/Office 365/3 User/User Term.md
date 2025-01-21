@@ -1,12 +1,16 @@
-# Azure and Exchange Online User Termination Commands
+---
+title: Azure and Exchange Online User Termination Commands
+description: Commands useful when off-boarding a user
+---
+
+Commands useful when off-boarding a user
 
 ## Prerequisites
 
-Before running these commands, you will need to connect to [Exchange Online](../1%20Global/ExchangeOnlineManagement.md) and [Microsoft Graph](../1%20Global/Microsoft.Graph.md) with the following scopes
+These commands require the following modules:
 
-```PowerShell
-Connect-MgGraph -Scopes "User.ReadWrite.All"
-```
+- #ExchangeOnlineManagement
+- #Microsoft_Graph with the `User.ReadWrite.All` scope
 
 ## Process
 

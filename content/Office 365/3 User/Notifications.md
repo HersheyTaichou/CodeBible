@@ -1,11 +1,13 @@
-# Disable Events from Email
+---
+title: Disable Events from Email
+---
 
 > These settings define whether Outlook or Outlook on the web (formerly known as Outlook Web App) automatically discovers events from email messages and adds them to the user's calendar.  
 > &mdash; From [Set-EventsFromEmailConfiguration](https://learn.microsoft.com/en-us/powershell/module/exchange/set-eventsfromemailconfiguration)
 
 ## Prerequisites
 
-Before running these commands, you will need to connect to [Exchange Online](../1%20Global/ExchangeOnlineManagement.md)
+These commands require the #ExchangeOnlineManagement module.
 
 ## Commands
 
