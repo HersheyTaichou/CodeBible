@@ -2,7 +2,7 @@
 title: Setup NVIDIA Drivers for Docker Containers
 ---
 
-To use an NVIDIA GPU for hardware acceleration in a docker container, you will need to configure the host to use the NVIDIA GPU, then install a toolkit to integrated with Docker. 
+To use an NVIDIA GPU for hardware acceleration in a docker container, you will need to configure the host to use the NVIDIA GPU, then install a toolkit to integrated with Docker.
 
 The recommended driver is dependent on what graphics card you have in your system. To determine the recommended driver, install and run the `nvidia-driver-assistant` package.
 
