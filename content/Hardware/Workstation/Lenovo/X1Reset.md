@@ -3,7 +3,7 @@ title: Lenovo X1 Carbon Reset Button
 description: How to find and press the reset button on an X1 Carbon
 ---
 
-Lenoovo X1 Carbons have a built-in battery that is not removable by the end user. While this allows the laptop to be thinner, it makes it hard to resolve issues that require unplugging the battery and plugging it back in.
+Lenovo X1 Carbons have a built-in battery that is not removable by the end user. While this allows the laptop to be thinner, it makes it hard to resolve issues that require unplugging the battery and plugging it back in.
 
 To resolve this, Lenovo includes a small reset button on the motherboard, which can be accessed from the bottom of the laptop. 
 
