@@ -15,3 +15,7 @@ These tools will need local administrative access to the machine they are runnin
 ### Dell
 
 [Dell Client Configuration Toolkit](https://www.dell.com/support/kbdoc/en-us/000134806/how-to-install-use-dell-client-configuration-toolkit)
+
+HP
+
+[HP BIOS Configuration Utility | HP Client Management Solutions](https://ftp.ext.hp.com/pub/caps-softpaq/cmit/HP_BCU.html)
