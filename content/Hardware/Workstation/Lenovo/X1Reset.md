@@ -24,7 +24,7 @@ Here are the steps to reset an X1 Carbon. The location of the reset button varie
 
 ## Reference Images
 
-The following images were taken from each model's user manual, then edited to add the model name to the image
+The following images were taken from each model's user manual, then edited to add the model name to the image. All applicable copyright information for the images can be found in the user manual. 
 
 ### X1 Carbon 3rd Gen
 
