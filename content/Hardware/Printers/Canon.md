@@ -1,4 +1,7 @@
-# Canon Printers
+---
+title: Installing Drivers for Canon Printers
+description: How to install the drivers for Canon printers
+---
 
 ## How to Install
 

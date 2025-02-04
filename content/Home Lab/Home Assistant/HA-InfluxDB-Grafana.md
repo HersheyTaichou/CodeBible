@@ -1,10 +1,12 @@
-# Home Assistant, InfluxDB and Grafana
+---
+title: Home Assistant, InfluxDB and Grafana
+---
 
 This how-to will take you through setting up Home Assistant (HA) to send logged data to InfluxDB and then access it in Grafana. This will give you access to longer term data logging, statisics and analytics, which allows you to see long term visualizations and trends.
 
 This setup will have a separate instance of Grafana and InfluxDB setup outside of Home Assistant, which provides greater flexibility to the InfluxDB setup.
 
-## Prerequisistes
+## Prerequisites
 
 This guide assumes you have Home Assistant setup either as a VM or on dedicated hardware and Docker setup on a separate host. If HA is on a dedicated vLAN, the docker host will need an interface connected to that vLAN.
 

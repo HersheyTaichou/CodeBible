@@ -1,4 +1,7 @@
-# Creating Dashboards with the Flux Query Language
+---
+title: Creating Dashboards with the Flux Query Language
+description: This document goes over the process to create dashboards in Grafana using the Flux query language.
+---
 
 This document goes over the process to create dashboards in Grafana using the Flux query language.
 

@@ -1,4 +1,6 @@
-# Home Assistant, InfluxDB and Grafana
+---
+title: Proxmox, InfluxDB and Grafana
+---
 
 This how-to will take you through setting up Proxmox (PVE) to send logged data to InfluxDB and then access it in Grafana. This will give you access to longer term data logging, statisics and analytics, which allows you to see long term visualizations and trends.
 
