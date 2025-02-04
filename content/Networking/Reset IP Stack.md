@@ -1,6 +1,8 @@
-# Reset the TCP/IP Stack
+---
+title: Reset the TCP/IP Stack
+---
 
-Run the following commands in an elevated CMD or PowerShell prompt
+Run the following commands in an elevated CMD or PowerShell prompt to Reset the TCP/IP Stack
 
 ```bat
 netsh advfirewall reset
@@ -11,3 +13,5 @@ netsh winsock reset
 netsh winsock reset catalog
 netsh int ip reset reset.log
 ```
+
+#Networking

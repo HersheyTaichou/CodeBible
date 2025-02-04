@@ -89,3 +89,5 @@ The download site includes a set of Lab Guides. Included in the guides is a "Set
       7. Check off the imported drive, and move it to the top
 
 1. Boot the VM
+
+#Test_env

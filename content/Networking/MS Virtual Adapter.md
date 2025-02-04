@@ -1,4 +1,6 @@
-# Microsoft Wi-Fi Direct Virtual Adapter
+---
+title: Microsoft Wi-Fi Direct Virtual Adapter
+---
 
 This can sometimes cause issues and slow down network connections. Use these steps to disable it
 
@@ -11,3 +13,5 @@ This can sometimes cause issues and slow down network connections. Use these ste
    ```
 
 3. Reboot
+
+#Networking 

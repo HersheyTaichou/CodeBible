@@ -1,8 +1,7 @@
 ---
 title: HP iLO
-description:
+description: HP Integrated Lights-Out (iLO) notes
 ---
-
 
 This article will cover work related to HP's iLO platform
 
@@ -12,4 +11,4 @@ This article will cover work related to HP's iLO platform
 
 The "HPE Lights-Out Online Configuration Utility for Windows x64 Editions" will allow you to configure iLO settings, including resetting the login password, from Windows. It has to be run as an administrator on the server.
 
-## More Information
+#HPE #Software 
