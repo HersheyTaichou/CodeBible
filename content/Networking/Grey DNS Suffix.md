@@ -2,7 +2,6 @@
 title: Fix for Greyed-out DNS Suffixes
 ---
 
-
 If this is what the DNS area in Networking looks like:  
 ![An image of the DNS Suffix settings greyed out](../Resources/Images/GreyDNSSuffix.png)
 
@@ -14,4 +13,4 @@ Reboot the computer to apply the changes and retest connection speeds
 
 [Source](https://social.technet.microsoft.com/Forums/ie/en-US/76d07f31-62d6-4648-a3e2-7e6e16791363/quotappend-these-dns-suffixesquot-not-available?forum=w7itpronetworking)
 
-tags: #Networking
+#Networking
