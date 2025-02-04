@@ -1,4 +1,6 @@
-# Working with `foreach`
+---
+title: Working with foreach
+---
 
 For use when you need to run a script on several results (dozens) and performing it manually would be time-consuming.
 

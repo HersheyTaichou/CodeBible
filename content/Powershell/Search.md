@@ -1,4 +1,6 @@
-# Search with Powershell
+---
+title: Search with Powershell
+---
 
 The following is a basic script to search for files with specific terms in the title or path. For more advanced filters, check the linked documentation.
 

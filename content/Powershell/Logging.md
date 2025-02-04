@@ -1,4 +1,7 @@
-# Logging PowerShell Scripts
+---
+title: Logging in PowerShell Scripts
+description: This article contains various ways you can log the output from a script to a machine or file.
+---
 
 This article contains various ways you can log the output from a script to a machine or file.
 

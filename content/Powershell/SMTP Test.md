@@ -1,12 +1,14 @@
-# Test SMTP Settings
+---
+title: Test SMTP Settings from PowerShell
+---
+
+> [!Deprecated] This command has been deprecated.
 
 This allows you to send an SMTP email message from a local device, to test if the credentials or setup is working
 
 This can be useful when setting up a scan to email device, and you are having trouble getting it to work.
 
 ## Commands
-
-**NOTE:** This command is being deprecated.
 
 ```PowerShell
 $UserCredential = Get-Credential
