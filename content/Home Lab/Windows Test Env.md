@@ -3,10 +3,6 @@ title: Windows 11 and Office 365 Deployment Lab Kit
 description: Microsoft provides an easy-to-setup pre-configured home lab with several VMs
 ---
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cd254695d0bd20b8bfd31deaa5fcade1be7e86fa
 The lab contains evaluation versions of the following products:
 
 - Windows 11 Enterprise, Version 24H2
