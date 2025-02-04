@@ -69,3 +69,5 @@ I DO NOT RECOMMEND doing this in a production environment, as it is not supporte
 6. Open the Unifi portal. You should be able to set it up or restore from backup without issue now
 
 Source: <https://www.scheh.com/index.php/2020/10/20/use-unifi-with-mongodb-above-4-0-0/>
+
+#Networking #Management #Software 

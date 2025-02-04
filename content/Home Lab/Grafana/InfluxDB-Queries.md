@@ -14,3 +14,5 @@ This document goes over the process to create dashboards in Grafana using the Fl
 5. Copy the data and switch to Grafana
 6. Open the dashboard to add the data to
 7. In the query field, add the search copied from the script editor
+
+#Software 
