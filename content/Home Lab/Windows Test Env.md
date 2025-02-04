@@ -1,26 +1,28 @@
-# Windows 10 and Office 365 Deployment Lab Kit
+---
+title: Windows 11 and Office 365 Deployment Lab Kit
+description: Microsoft provides an easy-to-setup pre-configured home lab with several VMs
+---
 
-Microsoft provides an easy-to-setup pre-configured home lab that includes the following:
 
-- Windows 10 Enterprise, Version 21H2
-- Microsoft Configuration Manager, Version 2103
-- Windows Assessment and Deployment Kit for Windows 10, version 2004
-- Microsoft Deployment Toolkit
-- Microsoft SQL Server 2017
-- Microsoft BitLocker Administration and Monitoring 2.5 SP1
-- Windows Server 2019
+The lab contains evaluation versions of the following products:  
+
+- Windows 11 Enterprise, Version 24H2
+- Microsoft Configuration Manager, Version 2409
+- Windows Server 2022
 
 It is designed to be deployed to an existing Hyper-V instance on the currently running machine.
 
 The software and guides can be downloaded here:
 
-[Windows 10 and Office 365 Deployment Lab Kit](https://www.microsoft.com/en-us/evalcenter/evaluate-lab-kit)
+[Windows 11 and Office 365 Deployment Lab Kit](https://www.microsoft.com/en-us/evalcenter/evaluate-lab-kit)
 
 ## Hyper-V Setup
 
 The download site includes a set of Lab Guides. Included in the guides is a "Set Up Guide" that details the steps needed to configure Hyper-V and extract the VMs.
 
 ## Proxmox Setup
+
+
 
 1. Download and extract the Zip file from Microsoft
 1. Use the setup guide to add the VMs to Hyper-V on the local machine
