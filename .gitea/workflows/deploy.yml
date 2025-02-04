@@ -1,0 +1,47 @@
+name: Build Quartz Site
+on: [push]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Checkout peter-notes
+        uses: actions/checkout@v3
+        with:
+          path: content
+      - name: Check out petersmindvault quartz site
+        run: |
+          git clone https://github.com/peterpeerdeman/petersmindvault.git
+      - name: copy notes into quartz site
+        run: |
+          cp -r ${{ gitea.workspace }}/content/. ${{ gitea.workspace }}/petersmindvault/content
+      - name: Get npm cache directory
+        id: npm-cache-dir
+        shell: bash
+        run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
+      - name: Activate NPM Cache
+        id: npm-cache
+        uses: actions/cache@v3
+        with:
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          path: ${{ steps.npm-cache-dir.outputs.dir }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: npm install
+        run: |
+          cd ${{ gitea.workspace }}/petersmindvault
+          npm i
+      - name: build quartz site 
+        run: |
+          cd ${{ gitea.workspace }}/petersmindvault
+          npx quartz build 
+      - name: Publish with netlify
+        uses: netlify/actions/cli@master
+        with:
+          args: deploy --prod --dir=${{ gitea.workspace }}/petersmindvault/public
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_API_TOKEN }}
