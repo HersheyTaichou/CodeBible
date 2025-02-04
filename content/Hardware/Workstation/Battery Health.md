@@ -1,4 +1,6 @@
-# Generate Battery Health Reports
+---
+title: Generate Battery Health Reports
+---
 
 ## Windows 8.1 and below
 

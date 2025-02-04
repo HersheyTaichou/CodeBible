@@ -1,6 +1,7 @@
-# Lenovo X1 Carbon Reset Button
-
-A brief overview of what this article covers
+---
+title: Lenovo X1 Carbon Reset Button
+description: How to find and press the reset button on an X1 Carbon
+---
 
 ## Prerequisites
 

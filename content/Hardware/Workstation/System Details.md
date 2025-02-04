@@ -1,4 +1,7 @@
-# Various Commands to get System Info
+---
+title: How to Gather System Info
+description: Various commands on gathering system info
+---
 
 ## BIOS Details
 
