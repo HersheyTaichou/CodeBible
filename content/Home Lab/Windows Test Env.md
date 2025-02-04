@@ -22,7 +22,7 @@ The download site includes a set of Lab Guides. Included in the guides is a "Set
 
 ## Proxmox Setup
 
-
+> [!Update] These steps were written for the previous version of the lab, built on Windows 10. Some adjustments may be required.
 
 1. Download and extract the Zip file from Microsoft
 1. Use the setup guide to add the VMs to Hyper-V on the local machine
@@ -64,7 +64,7 @@ The download site includes a set of Lab Guides. Included in the guides is a "Set
    1. Open PowerShell as an admin
    2. Browse to the VM folder, then into the Virtual Hard Disks folder
    3. Run this command, substituting the drive names for the VM you are converting
-
+      
       ```PowerShell
       Convert-VHD -Path .\HYD-DC1.VHDX -DestinationPath .\HYD-DC1.vhd -VHDType Dynamic
       ```

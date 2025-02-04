@@ -1,4 +1,8 @@
-# HP iLO
+---
+title: HP iLO
+description:
+---
+
 
 This article will cover work related to HP's iLO platform
 

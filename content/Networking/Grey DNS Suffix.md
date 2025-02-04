@@ -1,4 +1,7 @@
-# Fix for Greyed-out DNS Suffixes
+---
+title: Fix for Greyed-out DNS Suffixes
+---
+
 
 If this is what the DNS area in Networking looks like:  
 ![An image of the DNS Suffix settings greyed out](../Resources/Images/GreyDNSSuffix.png)
