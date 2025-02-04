@@ -14,7 +14,4 @@ This can sometimes cause issues and slow down network connections. Use these ste
 
 3. Reboot
 
-#Networking 
-
-
-
+#Networking

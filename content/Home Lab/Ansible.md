@@ -9,4 +9,4 @@ Ansible is a simple and powerful automation platform.
 
 [Installing and updating Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-and-upgrading-ansible)
 
-#Management 
+#Management
