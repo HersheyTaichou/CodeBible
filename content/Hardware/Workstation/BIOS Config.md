@@ -1,4 +1,7 @@
-# BIOS Configuration tools
+---
+title: BIOS Configuration tools
+description: Tools to get and change BIOS settings from within the OS for different vendors
+---
 
 Tools to get and change BIOS settings from within the OS for different vendors
 
