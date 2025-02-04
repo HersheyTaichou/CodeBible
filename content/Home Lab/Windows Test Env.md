@@ -4,7 +4,7 @@ description: Microsoft provides an easy-to-setup pre-configured home lab with se
 ---
 
 
-The lab contains evaluation versions of the following products:  
+The lab contains evaluation versions of the following products:
 
 - Windows 11 Enterprise, Version 24H2
 - Microsoft Configuration Manager, Version 2409
