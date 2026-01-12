@@ -1,3 +1,8 @@
+---
+title: Distribution Lists as Mermaid Chart
+description: Visualize nested distribution lists as a mermaid chart
+---
+
 # Get-DLMermaid
 
 ## SYNOPSIS
@@ -76,3 +81,4 @@ You are now ready to convert the output files to png!
    ```bash
    mmdc -i File.mmd -o File.png -c mmdconfig.json
    ```
+
