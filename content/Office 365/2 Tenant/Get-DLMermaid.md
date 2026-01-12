@@ -68,6 +68,7 @@ These steps are written on a Linux machine
 You are now ready to convert the output files to png!
 
 1. Create a config file (needed for very large mmd files)
+
    - mmdconfig.json
      ```json
      {
