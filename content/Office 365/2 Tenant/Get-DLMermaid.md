@@ -6,9 +6,11 @@ description: Visualize nested distribution lists as a mermaid chart
 # Get-DLMermaid
 
 ## SYNOPSIS
+
 Visualize nested distribution lists as a mermaid chart
 
 ## DESCRIPTION
+
 This script will output a Mermaid file that can be used to visualize how distribution groups are nested within each other.
 
 ## Parameters
@@ -81,4 +83,3 @@ You are now ready to convert the output files to png!
    ```bash
    mmdc -i File.mmd -o File.png -c mmdconfig.json
    ```
-
