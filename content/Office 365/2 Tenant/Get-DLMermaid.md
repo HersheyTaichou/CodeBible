@@ -5,6 +5,8 @@ description: Visualize nested distribution lists as a mermaid chart
 
 # Get-DLMermaid
 
+Link to script: [Get-DLMermaid](.\Get-DLMermaid.ps1)
+
 ## SYNOPSIS
 
 Visualize nested distribution lists as a mermaid chart
