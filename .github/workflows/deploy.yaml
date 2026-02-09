@@ -7,7 +7,7 @@ on:
   pull_request:
     branches: [v4.5.2]
     paths:
-      - .github/workflows/docker-build-push.yaml
+      - .github/workflows/deploy.yaml
       - quartz/**
   workflow_dispatch:
 
